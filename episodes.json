@@ -3,32 +3,52 @@
   "id": "r6oXqGYx-Y8",
   "title": "Goldfish remember for months. Not 3 seconds.",
   "published": "2026-10-12T17:42:50+00:00",
-  "description": "The Professor gets it wrong. Fact Check has the real answer."
+  "description": "The Professor gets it wrong. Fact Check has the real answer.",
+  "slug": "goldfish-memory-3-seconds",
+  "myth": "Goldfish only have a 3-second memory.",
+  "answer": "They don't. Goldfish can learn and remember things for months. In experiments they learn feeding times, which side of the tank food arrives on, and which coloured paddle to push, and they still remember it long after the training.",
+  "sources": "Live Science (Culum Brown, Macquarie University)"
  },
  {
   "id": "hm7paKmi7TE",
   "title": "Shaving doesn't thicken hair. The razor tip tricks your eyes.",
   "published": "2026-10-12T17:20:10+00:00",
-  "description": "The Professor gets it wrong. Fact Check has the real answer."
+  "description": "The Professor gets it wrong. Fact Check has the real answer.",
+  "slug": "shaving-thicker-hair",
+  "myth": "Shaving makes your hair grow back thicker.",
+  "answer": "It doesn't. Shaving cuts each hair straight across at its widest point, so the regrowing stubble has a blunt tip instead of a fine tapered one. That makes it feel coarser and look darker. The hair itself, and the follicle under the skin, are unchanged.",
+  "sources": "Mayo Clinic, Scientific American"
  },
  {
   "id": "NVF6kUCAdhg",
   "title": "You DON'T use just 10% of your brain",
   "published": "2026-10-12T10:56:12+00:00",
-  "description": "The Professor gets it wrong. Fact Check has the real answer. Source: Scientific American."
+  "description": "The Professor gets it wrong. Fact Check has the real answer. Source: Scientific American.",
+  "slug": "use-10-percent-of-brain",
+  "myth": "You only use 10% of your brain.",
+  "answer": "You use all of it. Brain scans show activity across the whole brain over a day, and even during sleep many regions stay busy. Damage to almost any part of the brain has effects, which would not be true if 90% sat idle.",
+  "sources": "Scientific American (neurologists Barry Gordon, Johns Hopkins, and John Henley, Mayo Clinic)"
  },
  {
   "id": "GjGkIfn5I2k",
   "title": "Lightning DOES strike twice",
   "published": "2026-10-11T13:35:55+00:00",
   "description": "The Professor insists lightning never strikes the same place twice. Fact Check shows it does, all the time.",
-  "duration": "PT52S"
+  "duration": "PT52S",
+  "slug": "lightning-strike-twice",
+  "myth": "Lightning never strikes the same place twice.",
+  "answer": "It does, and often. Tall, pointed and isolated objects get hit again and again, sometimes more than once in a single storm. Lightning does not avoid places it has already hit.",
+  "sources": "US National Weather Service, Live Science (lightning expert Martin Uman, University of Florida)"
  },
  {
   "id": "0zclC4hWPQ4",
   "title": "Your stomach can dissolve a razor blade",
   "published": "2026-10-11T12:47:44+00:00",
   "description": "The Professor is horrified by what stomach acid can do. Fact Check explains the catch.",
-  "duration": "PT51S"
+  "duration": "PT51S",
+  "slug": "stomach-acid-razor-blade",
+  "myth": "Your stomach acid can dissolve a razor blade.",
+  "answer": "In a lab dish, simulated stomach acid can corrode metal objects over time. That is the catch: a swallowed blade does not sit there long enough to dissolve, and it can cut you on the way through. This is a fun fact, not a challenge.",
+  "sources": "Li et al., \"In vitro effects of simulated gastric juice on swallowed metal objects\" (PubMed), Africa Check"
  }
 ]
