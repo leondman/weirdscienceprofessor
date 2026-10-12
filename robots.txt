@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leondman.github.io/weirdscienceprofessor/sitemap.xml
+Sitemap: https://weirdprofessoruniversity.com/sitemap.xml
