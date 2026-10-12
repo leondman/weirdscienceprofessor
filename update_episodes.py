@@ -47,6 +47,9 @@ def main():
     if not feed:
         print("empty feed, leaving site unchanged")
         return
+    if len(feed) < 15:
+        feed_ids = {f["id"] for f in feed}
+        known = {k: v for k, v in known.items() if k in feed_ids}
     for f in feed:
         if f["id"] in known:
             # keep hand-written text, refresh nothing but missing fields
