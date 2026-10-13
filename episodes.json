@@ -4,21 +4,53 @@
   "title": "Bats are NOT blind. The 'blind as a bat' myth is wrong.",
   "published": "2026-10-13T18:00:41+00:00",
   "sources": "Bat Conservation International, USGS, Current Biology",
-  "slug": "bats-are-not-blind-the-blind-as-a-bat-myth-is-wrong"
+  "slug": "bats-are-not-blind-the-blind-as-a-bat-myth-is-wrong",
+  "myth": "Bats are blind.",
+  "answer": "They are not. All bats have working eyes and can see. Vision varies by species, and some bats see better than people in the dark. Many bats use echolocation and sight together.",
+  "source_links": [
+   [
+    "Bat Conservation International: Blind as a Bat? No Such Thing",
+    "https://www.batcon.org/blind-as-a-bat-no-such-thing/"
+   ],
+   [
+    "USGS: Are bats blind?",
+    "https://www.usgs.gov/faqs/are-bats-blind"
+   ],
+   [
+    "Current Biology: Bats: Vision or echolocation, why not both?",
+    "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"
+   ]
+  ]
  },
  {
   "id": "DyRHnBbYyZo",
   "title": "Sugar does NOT make kids hyper",
   "published": "2026-10-13T17:20:45+00:00",
   "sources": "JAMA, Vanderbilt",
-  "slug": "sugar-does-not-make-kids-hyper"
+  "slug": "sugar-does-not-make-kids-hyper",
+  "myth": "Sugar makes kids hyper.",
+  "answer": "It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.",
+  "source_links": [
+   [
+    "Wolraich, Wilson and White, JAMA 1995: The Effect of Sugar on Behavior or Cognition in Children (meta-analysis)",
+    "https://jamanetwork.com/journals/jama/article-abstract/391812"
+   ]
+  ]
  },
  {
   "id": "zVBzxKlpXZw",
   "title": "Cracking your knuckles does NOT cause arthritis",
   "published": "2026-10-13T13:04:35+00:00",
   "sources": "Harvard Health",
-  "slug": "cracking-your-knuckles-does-not-cause-arthritis"
+  "slug": "cracking-your-knuckles-does-not-cause-arthritis",
+  "myth": "Cracking your knuckles gives you arthritis.",
+  "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. The pop is bubbles bursting in the joint fluid. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
+  "source_links": [
+   [
+    "Harvard Health: Does cracking knuckles cause arthritis?",
+    "https://www.health.harvard.edu/pain/does-cracking-knuckles-cause-arthritis"
+   ]
+  ]
  },
  {
   "id": "1mYke4OsLow",
