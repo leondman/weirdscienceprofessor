@@ -16,6 +16,8 @@ OUT = os.environ.get("SITE_OUT", ".")
 SHOW = 12
 YT = "https://www.youtube.com/@WeirdScienceProfessor"
 TT = "https://www.tiktok.com/@weirdscienceprofessor"
+IG = "https://www.instagram.com/weirdprofessoruniversity/"
+IG_REELS = {"DyRHnBbYyZo": "https://www.instagram.com/reel/DeciC0bxgVF/"}
 PATCH_FEED = "https://www.youtube.com/feeds/videos.xml?channel_id=UC4PbWZpyk-1IX5HIBejFytg"
 PATCH_YT = "https://www.youtube.com/@PatchTheMachine"
 PATCH_TT = "https://www.tiktok.com/@patchthemachine"
@@ -56,12 +58,12 @@ def load_patch():
         print("patch feed failed:", ex); return []
 
 # ---------- shared pieces ----------
-NAV = ('<header class="top"><a class="brand" href="/">The Weird Professor</a>'
-       '<nav aria-label="Main"><a href="/myths/">Myths</a><a href="/professor/">The Professor</a><a href="/patch/">PATCH</a>'
+NAV = ('<header class="top"><a class="brand" href="/">Weird Professor University</a>'
+       '<nav aria-label="Main"><a href="/myths/">Myths</a><a href="/professor/">The Professor</a><a href="/patch/">Patch</a>'
        '<a href="/#about">About</a></nav></header>')
-FOOT = ('<footer><p>The Weird Professor &middot; <a href="/myths/">All myths</a> &middot; '
-        '<a href="%s">YouTube</a> &middot; <a href="%s">TikTok</a></p>'
-        '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p></footer>') % (YT, TT)
+FOOT = ('<footer><p>Weird Professor University &middot; <a href="/myths/">All myths</a> &middot; '
+        '<a href="%s">YouTube</a> &middot; <a href="%s">TikTok</a> &middot; <a href="%s">Instagram</a></p>'
+        '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p></footer>') % (YT, TT, IG)
 
 
 SIGNUP = ('<section class="signup" id="join"><h2>Get the next myth first</h2>'
@@ -79,7 +81,7 @@ def head(title, desc, path, image=LOGO, ld=None, noindex=False, wide=False):
          '<link rel="canonical" href="%s">' % url,
          '<meta name="robots" content="%s">' % robots,
          '<meta name="theme-color" content="#15121c">',
-         '<meta property="og:type" content="website"><meta property="og:site_name" content="The Weird Professor">',
+         '<meta property="og:type" content="website"><meta property="og:site_name" content="Weird Professor University">',
          '<meta property="og:title" content="%s"><meta property="og:description" content="%s">' % (E(title), E(desc)),
          '<meta property="og:url" content="%s"><meta property="og:image" content="%s">' % (url, image),
          '<meta name="twitter:card" content="%s"><meta name="twitter:title" content="%s">' % (card, E(title)),
@@ -118,18 +120,18 @@ def build_home(eps):
     shown = eps[:SHOW]; latest = eps[0]
     desc = ("The Weird Professor is confidently wrong about weird science. Fact Check has the real answer. "
             "Animated Shorts that bust everyday science myths, with sources.")
-    title = "The Weird Professor | Animated science myths, Fact Checked"
-    ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "The Weird Professor",
+    title = "Weird Professor University | Animated science myths, Fact Checked"
+    ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Weird Professor University",
            "alternateName": "Dreadful Science", "url": SITE + "/", "description": desc},
-          {"@context": "https://schema.org", "@type": "Organization", "name": "The Weird Professor",
-           "url": SITE + "/", "logo": LOGO, "sameAs": [YT, TT]}] + [video_ld(e) for e in shown]
+          {"@context": "https://schema.org", "@type": "Organization", "name": "Weird Professor University",
+           "url": SITE + "/", "logo": LOGO, "sameAs": [YT, TT, IG]}] + [video_ld(e) for e in shown]
     p = head(title, desc, "/", ld=ld)
     p += NAV + '<main id="top">'
     p += ('<section class="hero"><div class="hero-text"><p class="kicker">Dreadful Science</p>'
-          '<h1>Confidently wrong about weird science.</h1>'
-          '<p class="lead">A manic professor gets everyday myths gloriously wrong. Then Fact Check interrupts with the real answer. New animated Shorts every day.</p>'
-          '<div class="cta"><a class="btn" href="%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div></div>'
-          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles, pointing at you"></section>') % (YT, TT, LOGO)
+          '<h1>Weird Professor University</h1>'
+          '<p class="lead">Confidently wrong about weird science. A manic professor gets everyday myths gloriously wrong. Then Fact Check interrupts with the real answer. New animated Shorts every day.</p>'
+          '<div class="cta"><a class="btn" href="%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a><a class="btn ghost" href="%s">Follow on Instagram</a></div></div>'
+          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles, pointing at you"></section>') % (YT, TT, IG, LOGO)
     p += SIGNUP
     p += ('<section id="latest"><h2>Latest myth</h2><a class="latest" href="%s"><img src="%s" alt="" width="480" height="360">'
           '<div><p class="kicker">%s</p><h3>%s</h3><p>%s</p><span class="btn">Read the fact check</span></div></a></section>') % (
@@ -138,7 +140,7 @@ def build_home(eps):
     p += ('<section id="characters"><h2>Characters</h2><div class="chars">'
           '<a class="char" href="/professor/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>The Weird Professor</h3><p>Your host. Manic, certain and wrong about everything.</p></div></a>'
           '<div class="char"><div class="fc" aria-hidden="true">FACT<br>CHECK</div><div><h3>Fact Check</h3><p>The bar that cuts in with the sourced answer.</p></div></div>'
-          '<a class="char" href="/patch/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>PATCH</h3><p>The lab&#39;s repair robot. Tests everything for real, fails honestly.</p></div></a>'
+          '<a class="char" href="/patch/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>Patch</h3><p>The lab&#39;s repair robot. Tests everything for real, fails honestly.</p></div></a>'
           '</div><p class="muted">More characters are on the way.</p></section>') % (LOGO, PATCH_IMG)
     p += ('<section id="about"><h2>About</h2>'
           '<p>Dreadful Science is a series of short animated episodes. Each one takes a gross, strange or frightening claim, lets the Weird Professor run with it, then corrects him with a sourced answer. Sources are listed on every myth page and in every video description.</p>'
@@ -156,14 +158,14 @@ def build_myth(ep, prev, nxt):
               {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
               {"@type": "ListItem", "position": 2, "name": "Myths", "item": SITE + "/myths/"},
               {"@type": "ListItem", "position": 3, "name": t, "item": SITE + path}]}]
-    p = head(t + " | The Weird Professor", desc, path, image=thumb(ep), ld=ld) + NAV + "<main>"
+    p = head(t + " | Weird Professor University", desc, path, image=thumb(ep), ld=ld) + NAV + "<main>"
     p += '<article class="myth"><p class="kicker"><a href="/myths/">Myths</a> &middot; %s</p><h1>%s</h1>' % (E(day(ep)), E(t))
     p += '<div class="frame solo"><iframe src="https://www.youtube-nocookie.com/embed/%s" title="%s" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' % (ep["id"], E(t))
     p += '<div class="box wrong"><h2>The Professor says</h2><p>%s</p></div>' % E(ep.get("myth") or "The Professor gets this one gloriously wrong.")
     p += '<div class="box right"><h2>Fact Check</h2><p>%s</p></div>' % E(ep.get("answer") or "Fact Check has the real, sourced answer in the video.")
     if ep.get("sources"):
         p += '<div class="box src"><h2>Sources</h2><p>%s</p></div>' % E(ep["sources"])
-    p += '<div class="cta"><a class="btn" href="https://www.youtube.com/shorts/%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div>' % (ep["id"], TT)
+    p += '<div class="cta"><a class="btn" href="https://www.youtube.com/shorts/%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a>%s</div>' % (ep["id"], TT, ('<a class="btn ghost" href="%s">Watch on Instagram</a>' % IG_REELS[ep["id"]]) if ep["id"] in IG_REELS else "")
     p += '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p>'
     p += SIGNUP
     links = []
@@ -177,7 +179,7 @@ def build_index(eps):
     desc = "Every myth the Weird Professor has gotten wrong, with the sourced Fact Check answer."
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "All myths",
           "url": SITE + "/myths/", "description": desc}
-    p = head("All myths | The Weird Professor", desc, "/myths/", ld=ld) + NAV + "<main>"
+    p = head("All myths | Weird Professor University", desc, "/myths/", ld=ld) + NAV + "<main>"
     p += '<section><h1 class="pagetitle">All myths</h1><p class="lead">Every claim the Professor got wrong, with the sourced answer.</p><div class="grid">%s</div></section>' % "".join(card(e) for e in eps)
     return p + "</main>" + FOOT + "</body></html>\n"
 
@@ -186,7 +188,7 @@ def build_professor(eps):
     ld = {"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {
         "@type": "Person", "name": "The Weird Professor", "description": desc, "image": LOGO,
         "sameAs": [YT, TT]}}
-    p = head("The Weird Professor | Meet the host of Dreadful Science", desc, "/professor/", ld=ld) + NAV + "<main>"
+    p = head("The Weird Professor | Meet the host of Weird Professor University", desc, "/professor/", ld=ld) + NAV + "<main>"
     p += ('<section class="hero"><div class="hero-text"><p class="kicker">Character</p><h1>The Weird Professor</h1>'
           '<p class="lead">Wild teal hair, yellow goggles and total certainty. He has a theory about everything, and it is wrong every time.</p>'
           '<p>Each episode he explains a myth like he invented it. Then Fact Check cuts in with the real answer and the sources. He never learns.</p>'
@@ -195,28 +197,28 @@ def build_professor(eps):
     p += ('<section><h2>Fact Check</h2><div class="char"><div class="fc" aria-hidden="true">FACT<br>CHECK</div>'
           '<div><h3>The correction bar</h3><p>Every claim ends with a sourced answer. Names of the sources are on every myth page.</p></div></div></section>')
     p += '<section><h2>His latest mistakes</h2><div class="grid">%s</div></section>' % "".join(card(e) for e in eps[:3])
-    p += '<section><h2>More characters</h2><p>Meet <a href="/patch/">PATCH</a>, the lab&#39;s repair robot.</p><p class="muted">New faces are on the way. Follow on <a href="%s">YouTube</a> or <a href="%s">TikTok</a> to meet them first.</p></section>' % (YT, TT)
+    p += '<section><h2>More characters</h2><p>Meet <a href="/patch/">Patch</a>, the lab&#39;s repair robot.</p><p class="muted">New faces are on the way. Follow on <a href="%s">YouTube</a> or <a href="%s">TikTok</a> to meet them first.</p></section>' % (YT, TT)
     return p + "</main>" + FOOT + "</body></html>\n"
 
 def build_patch(pe):
-    desc = "PATCH is the Weird Professor University's repair robot. One real test per episode, failures left in. Watch PATCH on YouTube and TikTok."
+    desc = "Patch is the Weird Professor University's repair robot. One real test per episode, failures left in. Watch Patch on YouTube and TikTok."
     ld = {"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {
-        "@type": "Person", "name": "PATCH", "description": desc, "image": PATCH_IMG, "sameAs": [PATCH_YT, PATCH_TT]}}
-    p = head("PATCH | The lab's repair robot | The Weird Professor", desc, "/patch/", image=PATCH_IMG, ld=ld) + NAV + "<main>"
-    p += ('<section class="hero"><div class="hero-text"><p class="kicker">Character</p><h1>PATCH</h1>'
+        "@type": "Person", "name": "Patch", "description": desc, "image": PATCH_IMG, "sameAs": [PATCH_YT, PATCH_TT]}}
+    p = head("Patch | The lab's repair robot | Weird Professor University", desc, "/patch/", image=PATCH_IMG, ld=ld) + NAV + "<main>"
+    p += ('<section class="hero"><div class="hero-text"><p class="kicker">Character</p><h1>Patch</h1>'
           '<p class="lead">The university lab&#39;s repair robot. Small, unfinished and very determined.</p>'
-          '<p>While the Professor gets science wrong on purpose, PATCH runs real tests and logs what actually happened, failures included. The robot and his world are fiction. The experiments and results are real.</p>'
-          '<div class="cta"><a class="btn" href="%s">Watch PATCH on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div></div>'
-          '<img class="hero-img" src="%s" width="600" height="600" alt="PATCH, a small repair robot"></section>') % (PATCH_YT, PATCH_TT, PATCH_IMG)
+          '<p>While the Professor gets science wrong on purpose, Patch runs real tests and logs what actually happened, failures included. The robot and his world are fiction. The experiments and results are real.</p>'
+          '<div class="cta"><a class="btn" href="%s">Watch Patch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div></div>'
+          '<img class="hero-img" src="%s" width="600" height="600" alt="Patch, a small repair robot"></section>') % (PATCH_YT, PATCH_TT, PATCH_IMG)
     if pe:
-        p += '<section><h2>Latest from PATCH</h2><div class="grid">%s</div></section>' % "".join(
+        p += '<section><h2>Latest from Patch</h2><div class="grid">%s</div></section>' % "".join(
             ('<article class="ep"><a class="thumb" href="https://www.youtube.com/shorts/%s"><img src="https://i.ytimg.com/vi/%s/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"></a>'
              '<h3><a href="https://www.youtube.com/shorts/%s">%s</a></h3></article>') % (x["id"], x["id"], x["id"], E(x["title"])) for x in pe)
-    p += '<section><p class="muted">PATCH has his own channel. This is his home at the university.</p></section>'
+    p += '<section><p class="muted">Patch has his own channel. This is his home at the university.</p></section>'
     return p + "</main>" + FOOT + "</body></html>\n"
 
 def build_404():
-    p = head("Page not found | The Weird Professor", "That page does not exist.", "/404.html", noindex=True) + NAV
+    p = head("Page not found | Weird Professor University", "That page does not exist.", "/404.html", noindex=True) + NAV
     p += '<main><section><h1 class="pagetitle">Wrong again.</h1><p class="lead">The Professor says this page exists. Fact Check says it does not.</p><div class="cta"><a class="btn" href="/">Back home</a><a class="btn ghost" href="/myths/">All myths</a></div></section></main>'
     return p + FOOT + "</body></html>\n"
 
