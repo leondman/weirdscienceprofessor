@@ -163,7 +163,9 @@ def build_myth(ep, prev, nxt):
     p += '<div class="frame solo"><iframe src="https://www.youtube-nocookie.com/embed/%s" title="%s" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' % (ep["id"], E(t))
     p += '<div class="box wrong"><h2>The Professor says</h2><p>%s</p></div>' % E(ep.get("myth") or "The Professor gets this one gloriously wrong.")
     p += '<div class="box right"><h2>Fact Check</h2><p>%s</p></div>' % E(ep.get("answer") or "Fact Check has the real, sourced answer in the video.")
-    if ep.get("sources"):
+    if ep.get("source_links"):
+        p += '<div class="box src"><h2>Sources</h2><ul>%s</ul></div>' % "".join('<li><a href="%s" rel="noopener">%s</a></li>' % (E(u), E(n)) for n, u in ep["source_links"])
+    elif ep.get("sources"):
         p += '<div class="box src"><h2>Sources</h2><p>%s</p></div>' % E(ep["sources"])
     p += '<div class="cta"><a class="btn" href="https://www.youtube.com/shorts/%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a>%s</div>' % (ep["id"], TT, ('<a class="btn ghost" href="%s">Watch on Instagram</a>' % IG_REELS[ep["id"]]) if ep["id"] in IG_REELS else "")
     p += '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p>'
@@ -233,6 +235,25 @@ def write(path, text):
     os.makedirs(os.path.dirname(full) or ".", exist_ok=True)
     open(full, "w", encoding="utf-8").write(text)
 
+
+# Curated fact-check text and source links (verified Oct 13 2026). Applied over episodes.json.
+EXTRA = {
+ "DyRHnBbYyZo": {
+  "myth": "Sugar makes kids hyper.",
+  "answer": "It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.",
+  "source_links": [["Wolraich, Wilson and White, JAMA 1995: The Effect of Sugar on Behavior or Cognition in Children (meta-analysis)", "https://jamanetwork.com/journals/jama/article-abstract/391812"]]},
+ "zVBzxKlpXZw": {
+  "myth": "Cracking your knuckles gives you arthritis.",
+  "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. The pop is bubbles bursting in the joint fluid. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
+  "source_links": [["Harvard Health: Does cracking knuckles cause arthritis?", "https://www.health.harvard.edu/pain/does-cracking-knuckles-cause-arthritis"]]},
+ "TWELor9a07U": {
+  "myth": "Bats are blind.",
+  "answer": "They are not. All bats have working eyes and can see. Vision varies by species, and some bats see better than people in the dark. Many bats use echolocation and sight together.",
+  "source_links": [["Bat Conservation International: Blind as a Bat? No Such Thing", "https://www.batcon.org/blind-as-a-bat-no-such-thing/"],
+                   ["USGS: Are bats blind?", "https://www.usgs.gov/faqs/are-bats-blind"],
+                   ["Current Biology: Bats: Vision or echolocation, why not both?", "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"]]},
+}
+
 def main():
     data = json.load(open(os.path.join(OUT, "episodes.json")))
     known = {x["id"]: x for x in data}
@@ -252,6 +273,8 @@ def main():
             if not k.get("sources") and f["sources"]: k["sources"] = f["sources"]
         else:
             known[f["id"]] = {"id": f["id"], "title": f["title"], "published": f["published"], "sources": f["sources"]}
+    for k_, v_ in EXTRA.items():
+        if k_ in known: known[k_].update(v_)
     eps = sorted(known.values(), key=lambda x: x["published"], reverse=True)
     used = set()
     for e in eps:
