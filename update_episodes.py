@@ -63,6 +63,12 @@ FOOT = ('<footer><p>The Weird Professor &middot; <a href="/myths/">All myths</a>
         '<a href="%s">YouTube</a> &middot; <a href="%s">TikTok</a></p>'
         '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p></footer>') % (YT, TT)
 
+
+SIGNUP = ('<section class="signup" id="join"><h2>Get the next myth first</h2>'
+          '<p>One email when a new episode drops. No spam. Unsubscribe any time.</p>'
+          "<script async data-uid='987fba3d3f' src='https://weird-professor-university.kit.com/987fba3d3f/index.js'></script>"
+          '<p class="muted small">We use your email only to send new-episode emails. Unsubscribe from any email. Email is handled by Kit.</p></section>')
+
 def head(title, desc, path, image=LOGO, ld=None, noindex=False, wide=False):
     url = SITE + path
     robots = "noindex, nofollow" if noindex else "index, follow, max-image-preview:large"
@@ -124,6 +130,7 @@ def build_home(eps):
           '<p class="lead">A manic professor gets everyday myths gloriously wrong. Then Fact Check interrupts with the real answer. New animated Shorts every day.</p>'
           '<div class="cta"><a class="btn" href="%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div></div>'
           '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles, pointing at you"></section>') % (YT, TT, LOGO)
+    p += SIGNUP
     p += ('<section id="latest"><h2>Latest myth</h2><a class="latest" href="%s"><img src="%s" alt="" width="480" height="360">'
           '<div><p class="kicker">%s</p><h3>%s</h3><p>%s</p><span class="btn">Read the fact check</span></div></a></section>') % (
         page_url(latest), thumb(latest), E(day(latest)), E(latest["title"]), E(latest.get("myth") or latest.get("description") or ""))
@@ -158,6 +165,7 @@ def build_myth(ep, prev, nxt):
         p += '<div class="box src"><h2>Sources</h2><p>%s</p></div>' % E(ep["sources"])
     p += '<div class="cta"><a class="btn" href="https://www.youtube.com/shorts/%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div>' % (ep["id"], TT)
     p += '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p>'
+    p += SIGNUP
     links = []
     if nxt: links.append('<a href="%s">&larr; Newer: %s</a>' % (page_url(nxt), E(nxt["title"])))
     if prev: links.append('<a href="%s">Older: %s &rarr;</a>' % (page_url(prev), E(prev["title"])))
