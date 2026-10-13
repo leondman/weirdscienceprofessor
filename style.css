@@ -57,3 +57,5 @@ a.char{text-decoration:none;color:var(--ink)}a.char:hover h3{color:var(--teal)}
 a.thumb{aspect-ratio:4/5}a.thumb img{object-position:center 25%}
 .latest img{aspect-ratio:4/5;object-position:center 25%;max-height:320px}
 @media(min-width:800px){.latest{grid-template-columns:200px 1fr}}
+
+.signup{max-width:640px;margin:32px auto;padding:20px;border:2px solid var(--teal);border-radius:14px}.signup h2{margin-top:0}.signup .small{font-size:.8rem}
