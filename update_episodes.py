@@ -60,7 +60,7 @@ def load_patch():
 # ---------- shared pieces ----------
 NAV = ('<header class="top"><a class="brand" href="/">Weird Professor University</a>'
        '<nav aria-label="Main"><a href="/myths/">Myths</a><a href="/professor/">The Professor</a><a href="/patch/">Patch</a>'
-       '<a href="/#about">About</a></nav></header>')
+       '<a href="/#about">About</a></nav><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button></header>')
 FOOT = ('<footer><p>Weird Professor University &middot; <a href="/myths/">All myths</a> &middot; '
         '<a href="%s">YouTube</a> &middot; <a href="%s">TikTok</a> &middot; <a href="%s">Instagram</a></p>'
         '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p></footer>') % (YT, TT, IG)
@@ -80,7 +80,7 @@ def head(title, desc, path, image=LOGO, ld=None, noindex=False, wide=False):
          '<meta name="description" content="%s">' % E(desc),
          '<link rel="canonical" href="%s">' % url,
          '<meta name="robots" content="%s">' % robots,
-         '<meta name="theme-color" content="#15121c">',
+         '<meta name="theme-color" content="#fffdf7">',
          '<meta property="og:type" content="website"><meta property="og:site_name" content="Weird Professor University">',
          '<meta property="og:title" content="%s"><meta property="og:description" content="%s">' % (E(title), E(desc)),
          '<meta property="og:url" content="%s"><meta property="og:image" content="%s">' % (url, image),
@@ -89,7 +89,7 @@ def head(title, desc, path, image=LOGO, ld=None, noindex=False, wide=False):
          '<link rel="icon" href="%s">' % LOGO,
          '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
          '<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">',
-         '<link rel="stylesheet" href="/style.css">']
+         '<link rel="stylesheet" href="/style.css">', '<script src="/theme.js"></script>']
     if ld:
         h.append('<script type="application/ld+json">%s</script>' % json.dumps(ld, indent=1, ensure_ascii=False).replace("</", "<\\/"))
     h.append("</head><body>")
