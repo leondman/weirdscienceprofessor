@@ -238,6 +238,7 @@ def write(path, text):
 
 # Curated fact-check text and source links (verified Oct 13 2026). Applied over episodes.json.
 EXTRA = {
+ "K13pEc5kgU4": {"myth": "Swallowed gum stays in your stomach for seven years.", "answer": "It does not. Your body cannot digest chewing gum, but swallowed gum moves relatively intact through your digestive system and passes out in your stool. Very rarely, large amounts of swallowed gum combined with constipation have blocked intestines in children. Do not make swallowing gum a habit.", "source_links": [["Mayo Clinic: Swallowing gum: Is it harmful?", "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"]]},
  "DyRHnBbYyZo": {
   "myth": "Sugar makes kids hyper.",
   "answer": "It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.",
