@@ -77,3 +77,6 @@ a.thumb.landscape{aspect-ratio:16/9}a.thumb.landscape img{object-fit:contain;obj
 .follow{max-width:1000px;margin:40px auto 0;padding:28px 20px;border-top:1px solid var(--rule)}
 .follow h2{font-size:28px;margin-bottom:8px}.follow p{margin:0}
 @media(max-width:360px){.grid,.chars{grid-template-columns:minmax(0,1fr)}}
+
+/* Audit navigation wrap */
+.pn a{white-space:normal;overflow-wrap:anywhere}
