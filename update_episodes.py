@@ -61,7 +61,11 @@ def load_patch():
 NAV = ('<header class="top"><a class="brand" href="/">Weird Professor University</a>'
        '<nav aria-label="Main"><a href="/myths/">Myths</a><a href="/professor/">The Professor</a><a href="/patch/">Patch</a>'
        '<a href="/#about">About</a></nav><button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button></header>')
-FOOT = ('<footer><p>Weird Professor University &middot; <a href="/myths/">All myths</a> &middot; '
+FOLLOW = ('<section class="follow" aria-label="Follow our work"><h2>Follow the next fact check</h2>'
+          '<p>More Professor myths, animated stories and checked sources.</p><div class="cta">'
+          '<a class="btn" href="%s">Follow on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a>'
+          '<a class="btn ghost" href="%s">Follow on Instagram</a></div></section>') % (YT, TT, IG)
+FOOT = FOLLOW + ('<footer><p>Weird Professor University &middot; <a href="/myths/">All myths</a> &middot; '
         '<a href="%s">YouTube</a> &middot; <a href="%s">TikTok</a> &middot; <a href="%s">Instagram</a></p>'
         '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p></footer>') % (YT, TT, IG)
 
@@ -101,19 +105,19 @@ def day(ep): return ep["published"][:10]
 
 def video_ld(ep):
     v = {"@context": "https://schema.org", "@type": "VideoObject", "name": ep["title"],
-         "description": ep.get("myth") or ep.get("description") or ep["title"],
+         "description": ep.get("answer") or ep.get("description") or ep["title"],
          "thumbnailUrl": [thumb(ep)], "uploadDate": ep["published"],
          "embedUrl": "https://www.youtube.com/embed/" + ep["id"],
-         "contentUrl": "https://www.youtube.com/shorts/" + ep["id"]}
+         "url": SITE + page_url(ep)}
     if ep.get("duration"): v["duration"] = ep["duration"]
     return v
 
 def card(ep):
-    blurb = ep.get("myth") or ep.get("description") or ""
-    return ('<article class="ep"><a class="thumb" href="%s"><img src="%s" alt="" loading="lazy" width="480" height="360"></a>'
+    blurb = ("Myth: " + ep["myth"]) if ep.get("myth") else ep.get("description", "")
+    return ('<article class="ep"><a class="thumb %s" href="%s"><img src="%s" alt="" loading="lazy" width="480" height="360"></a>'
             '<h3><a href="%s">%s</a></h3><p>%s</p>'
             '<a class="btn ghost" href="%s">Read the fact check</a></article>') % (
-        page_url(ep), thumb(ep), page_url(ep), E(ep["title"]), E(blurb), page_url(ep))
+        ("landscape" if ep.get("format") == "landscape" else ""), page_url(ep), thumb(ep), page_url(ep), E(ep["title"]), E(blurb), page_url(ep))
 
 # ---------- pages ----------
 def build_home(eps):
@@ -135,12 +139,12 @@ def build_home(eps):
     p += SIGNUP
     p += ('<section id="latest"><h2>Latest myth</h2><a class="latest" href="%s"><img src="%s" alt="" width="480" height="360">'
           '<div><p class="kicker">%s</p><h3>%s</h3><p>%s</p><span class="btn">Read the fact check</span></div></a></section>') % (
-        page_url(latest), thumb(latest), E(day(latest)), E(latest["title"]), E(latest.get("myth") or latest.get("description") or ""))
+        page_url(latest), thumb(latest), E(day(latest)), E(latest["title"]), E(("Myth: " + latest["myth"]) if latest.get("myth") else latest.get("description", "")))
     p += '<section id="episodes"><h2>Episodes</h2><div class="grid">%s</div><p class="more"><a class="btn ghost" href="/myths/">See every myth</a></p></section>' % "".join(card(e) for e in shown)
     p += ('<section id="characters"><h2>Characters</h2><div class="chars">'
-          '<a class="char" href="/professor/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>The Weird Professor</h3><p>Your host. Manic, certain and wrong about everything.</p></div></a>'
+          '<a class="char" href="/professor/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>The Weird Professor</h3><p>Your host. Manic, certain and always ready with a theory.</p></div></a>'
           '<div class="char"><div class="fc" aria-hidden="true">FACT<br>CHECK</div><div><h3>Fact Check</h3><p>The bar that cuts in with the sourced answer.</p></div></div>'
-          '<a class="char" href="/patch/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>Patch</h3><p>The lab&#39;s repair robot. Tests everything for real, fails honestly.</p></div></a>'
+          '<a class="char" href="/patch/"><img src="%s" width="120" height="120" alt="" loading="lazy"><div><h3>Patch</h3><p>The lab&#39;s repair robot. Animated engineering lessons, honest about the mistakes.</p></div></a>'
           '</div><p class="muted">More characters are on the way.</p></section>') % (LOGO, PATCH_IMG)
     p += ('<section id="about"><h2>About</h2>'
           '<p>Dreadful Science is a series of short animated episodes. Each one takes a gross, strange or frightening claim, lets the Weird Professor run with it, then corrects him with a sourced answer. Sources are listed on every myth page and in every video description.</p>'
@@ -160,14 +164,14 @@ def build_myth(ep, prev, nxt):
               {"@type": "ListItem", "position": 3, "name": t, "item": SITE + path}]}]
     p = head(t + " | Weird Professor University", desc, path, image=thumb(ep), ld=ld) + NAV + "<main>"
     p += '<article class="myth"><p class="kicker"><a href="/myths/">Myths</a> &middot; %s</p><h1>%s</h1>' % (E(day(ep)), E(t))
-    p += '<div class="frame solo"><iframe src="https://www.youtube-nocookie.com/embed/%s" title="%s" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' % (ep["id"], E(t))
+    p += '<div class="frame solo %s"><iframe src="https://www.youtube-nocookie.com/embed/%s" title="%s" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>' % (("landscape" if ep.get("format") == "landscape" else ""), ep["id"], E(t))
     p += '<div class="box wrong"><h2>The Professor says</h2><p>%s</p></div>' % E(ep.get("myth") or "The Professor gets this one gloriously wrong.")
     p += '<div class="box right"><h2>Fact Check</h2><p>%s</p></div>' % E(ep.get("answer") or "Fact Check has the real, sourced answer in the video.")
     if ep.get("source_links"):
         p += '<div class="box src"><h2>Sources</h2><ul>%s</ul></div>' % "".join('<li><a href="%s" rel="noopener">%s</a></li>' % (E(u), E(n)) for n, u in ep["source_links"])
     elif ep.get("sources"):
         p += '<div class="box src"><h2>Sources</h2><p>%s</p></div>' % E(ep["sources"])
-    p += '<div class="cta"><a class="btn" href="https://www.youtube.com/shorts/%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a>%s</div>' % (ep["id"], TT, ('<a class="btn ghost" href="%s">Watch on Instagram</a>' % IG_REELS[ep["id"]]) if ep["id"] in IG_REELS else "")
+    p += '<div class="cta"><a class="btn" href="https://www.youtube.com/watch?v=%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a>%s</div>' % (ep["id"], TT, ('<a class="btn ghost" href="%s">Watch on Instagram</a>' % IG_REELS[ep["id"]]) if ep["id"] in IG_REELS else "")
     p += '<p class="muted">Made with AI. The characters are fiction. The facts are checked.</p>'
     p += SIGNUP
     links = []
@@ -178,38 +182,38 @@ def build_myth(ep, prev, nxt):
     return p
 
 def build_index(eps):
-    desc = "Every myth the Weird Professor has gotten wrong, with the sourced Fact Check answer."
+    desc = "Every Professor myth, with the sourced Fact Check answer."
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "All myths",
           "url": SITE + "/myths/", "description": desc}
     p = head("All myths | Weird Professor University", desc, "/myths/", ld=ld) + NAV + "<main>"
-    p += '<section><h1 class="pagetitle">All myths</h1><p class="lead">Every claim the Professor got wrong, with the sourced answer.</p><div class="grid">%s</div></section>' % "".join(card(e) for e in eps)
+    p += '<section><h1 class="pagetitle">All myths</h1><p class="lead">Every Professor claim, with the sourced answer.</p><div class="grid">%s</div></section>' % "".join(card(e) for e in eps)
     return p + "</main>" + FOOT + "</body></html>\n"
 
 def build_professor(eps):
-    desc = "Meet the Weird Professor: the manic, confident, always wrong host of Dreadful Science. Fact Check sets him straight."
+    desc = "Meet the Weird Professor: the manic, confident myth-making host of Dreadful Science. Fact Check sets him straight."
     ld = {"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {
         "@type": "Person", "name": "The Weird Professor", "description": desc, "image": LOGO,
         "sameAs": [YT, TT]}}
     p = head("The Weird Professor | Meet the host of Weird Professor University", desc, "/professor/", ld=ld) + NAV + "<main>"
     p += ('<section class="hero"><div class="hero-text"><p class="kicker">Character</p><h1>The Weird Professor</h1>'
-          '<p class="lead">Wild teal hair, yellow goggles and total certainty. He has a theory about everything, and it is wrong every time.</p>'
+          '<p class="lead">Wild teal hair, round glasses and total certainty. He has a theory about everything. Fact Check tests his claims.</p>'
           '<p>Each episode he explains a myth like he invented it. Then Fact Check cuts in with the real answer and the sources. He never learns.</p>'
           '<div class="cta"><a class="btn" href="/myths/">See his mistakes</a><a class="btn ghost" href="%s">Watch on YouTube</a></div></div>'
           '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles"></section>') % (YT, LOGO)
     p += ('<section><h2>Fact Check</h2><div class="char"><div class="fc" aria-hidden="true">FACT<br>CHECK</div>'
-          '<div><h3>The correction bar</h3><p>Every claim ends with a sourced answer. Names of the sources are on every myth page.</p></div></div></section>')
+          '<div><h3>The correction bar</h3><p>Every claim ends with a sourced answer. Links to the sources are on every myth page.</p></div></div></section>')
     p += '<section><h2>His latest mistakes</h2><div class="grid">%s</div></section>' % "".join(card(e) for e in eps[:3])
     p += '<section><h2>More characters</h2><p>Meet <a href="/patch/">Patch</a>, the lab&#39;s repair robot.</p><p class="muted">New faces are on the way. Follow on <a href="%s">YouTube</a> or <a href="%s">TikTok</a> to meet them first.</p></section>' % (YT, TT)
     return p + "</main>" + FOOT + "</body></html>\n"
 
 def build_patch(pe):
-    desc = "Patch is the Weird Professor University's repair robot. One real test per episode, failures left in. Watch Patch on YouTube and TikTok."
+    desc = "Patch is the Weird Professor University's repair robot. Animated engineering lessons with a fictional repair robot. Watch Patch on YouTube and TikTok."
     ld = {"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {
         "@type": "Person", "name": "Patch", "description": desc, "image": PATCH_IMG, "sameAs": [PATCH_YT, PATCH_TT]}}
     p = head("Patch | The lab's repair robot | Weird Professor University", desc, "/patch/", image=PATCH_IMG, ld=ld) + NAV + "<main>"
     p += ('<section class="hero"><div class="hero-text"><p class="kicker">Character</p><h1>Patch</h1>'
           '<p class="lead">The university lab&#39;s repair robot. Small, unfinished and very determined.</p>'
-          '<p>While the Professor gets science wrong on purpose, Patch runs real tests and logs what actually happened, failures included. The robot and his world are fiction. The experiments and results are real.</p>'
+          '<p>Patch explores engineering ideas through animated stories and worked examples. The robot, scenes and mishaps are fiction, not footage of physical experiments. New Patch production is paused; existing episodes are still available.</p>'
           '<div class="cta"><a class="btn" href="%s">Watch Patch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a></div></div>'
           '<img class="hero-img" src="%s" width="600" height="600" alt="Patch, a small repair robot"></section>') % (PATCH_YT, PATCH_TT, PATCH_IMG)
     if pe:
@@ -238,6 +242,14 @@ def write(path, text):
 
 # Curated fact-check text and source links (verified Oct 13 2026). Applied over episodes.json.
 EXTRA = {
+ "r6oXqGYx-Y8": {"source_links": [["Live Science: Do goldfish really have a 3-second memory?", "https://www.livescience.com/goldfish-memory.html"]]},
+ "hm7paKmi7TE": {"source_links": [["Mayo Clinic: Does shaved hair grow back thicker?", "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"]]},
+ "NVF6kUCAdhg": {"source_links": [["Scientific American: Do People Only Use 10 Percent of Their Brains?", "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"]]},
+ "GjGkIfn5I2k": {"source_links": [["US National Weather Service: Lightning Myths", "https://www.weather.gov/safety/lightning-myths"]]},
+ "0zclC4hWPQ4": {"answer": "In a laboratory study, simulated gastric juice corroded razor blades over time. After 24 hours the blades weighed 63% of their original weight. This does not make swallowing metal safe: sharp objects can cause serious injury. Never try it. A lab corrosion result is not a safe way to remove a swallowed object.", "source_links": [["Li et al., 1997: In vitro effects of simulated gastric juice on swallowed metal objects (PubMed)", "https://pubmed.ncbi.nlm.nih.gov/9283866/"]]},
+ "1mYke4OsLow": {"format": "landscape", "myth": "Wet hair causes colds; sugar makes children hyper; knuckle cracking causes arthritis; bulls hate red; the Great Wall is easy to see from space.", "answer": "Wet hair does not cause a cold: viruses do. A 1995 JAMA meta-analysis found no overall effect of sugar on children's behaviour or cognition, while noting that a small effect or effects in subsets of children cannot be ruled out. Knuckle-cracking studies have not found higher arthritis rates; Donald Unger's one-person experiment was a memorable example, not proof on its own. Movement, not a special hatred of red, draws a bull's attention. NASA says the Great Wall is not visible from the Moon and is difficult or impossible to see unaided from Earth orbit.", "source_links": [["Mayo Clinic: Myths about catching a cold", "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-q-and-a-myths-about-catching-a-cold/"], ["Wolraich, Wilson and White, JAMA 1995: Sugar meta-analysis", "https://jamanetwork.com/journals/jama/article-abstract/391812"], ["Scientific American: Crack Research", "https://www.scientificamerican.com/article/crack-research/"], ["Live Science: Why Do Bulls Charge When They See Red?", "https://www.livescience.com/33700-bulls-charge-red.html"], ["NASA: Great Wall", "https://www.nasa.gov/image-article/great-wall/"]]},
+ "xKAbWN8G-NY": {"format": "landscape", "myth": "We use only 10% of our brains; shaving thickens hair; goldfish remember for three seconds; lightning never strikes twice; gum stays in the stomach for seven years.", "answer": "Over a day we use virtually every part of the brain, not just 10%. Shaving does not change hair thickness, colour or growth rate: a blunt tip can feel coarser. Goldfish can learn and retain information far longer than three seconds, including for months. Lightning can strike the same place repeatedly, especially tall isolated objects. Swallowed gum usually passes through relatively intact rather than staying for seven years, though large amounts combined with constipation can rarely cause a blockage in children.", "source_links": [["Scientific American: The 10% brain myth", "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"], ["Mayo Clinic: Shaving and hair thickness", "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"], ["Live Science: Goldfish memory", "https://www.livescience.com/goldfish-memory.html"], ["The Guardian: Plymouth feeding-lever research", "https://www.theguardian.com/uk/2003/oct/01/highereducation.science"], ["US National Weather Service: Lightning Myths", "https://www.weather.gov/safety/lightning-myths"], ["Live Science: Repeated Empire State Building strikes", "https://www.livescience.com/13704-empire-state-building-lightning-strike.html"], ["Mayo Clinic: Swallowing gum", "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"]]},
+
  "K13pEc5kgU4": {"myth": "Swallowed gum stays in your stomach for seven years.", "answer": "It does not. Your body cannot digest chewing gum, but swallowed gum moves relatively intact through your digestive system and passes out in your stool. Very rarely, large amounts of swallowed gum combined with constipation have blocked intestines in children. Do not make swallowing gum a habit.", "source_links": [["Mayo Clinic: Swallowing gum: Is it harmful?", "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"]]},
  "DyRHnBbYyZo": {
   "myth": "Sugar makes kids hyper.",
@@ -245,7 +257,7 @@ EXTRA = {
   "source_links": [["Wolraich, Wilson and White, JAMA 1995: The Effect of Sugar on Behavior or Cognition in Children (meta-analysis)", "https://jamanetwork.com/journals/jama/article-abstract/391812"]]},
  "zVBzxKlpXZw": {
   "myth": "Cracking your knuckles gives you arthritis.",
-  "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. The pop is bubbles bursting in the joint fluid. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
+  "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
   "source_links": [["Harvard Health: Does cracking knuckles cause arthritis?", "https://www.health.harvard.edu/pain/does-cracking-knuckles-cause-arthritis"]]},
  "TWELor9a07U": {
   "myth": "Bats are blind.",
@@ -261,12 +273,9 @@ def main():
     try:
         feed = load_feed()
     except Exception as ex:
-        print("feed fetch failed, leaving site unchanged:", ex); return
-    if not feed:
-        print("empty feed, leaving site unchanged"); return
-    if len(feed) < 15:
-        ids = {f["id"] for f in feed}
-        known = {k: v for k, v in known.items() if k in ids}
+        print("feed fetch unavailable, retaining known episodes:", ex); feed = []
+    if not known and not feed:
+        print("No episode data available"); return
     for f in feed:
         if f["id"] in known:
             k = known[f["id"]]
@@ -289,6 +298,10 @@ def main():
     write("patch/index.html", build_patch(load_patch()))
     write("404.html", build_404())
     write("sitemap.xml", build_sitemap(eps))
+    write("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: " + SITE + "/sitemap.xml\n")
+    llms = "# Weird Professor University\n\n> Animated science myth-busting by The Weird Professor, with sourced fact checks.\n\nThe characters and animated stories are fiction. Source links and factual qualifications are on each episode page. Patch is a fictional engineering character; new Patch production is paused.\n\n## Main pages\n\n- [Home](" + SITE + "/)\n- [All myths](" + SITE + "/myths/)\n- [The Professor](" + SITE + "/professor/)\n- [Patch](" + SITE + "/patch/)\n\n## Follow\n\n- [YouTube](" + YT + ")\n- [TikTok](" + TT + ")\n- [Instagram](" + IG + ")\n\n## Fact checks\n\n"
+    llms += "".join("- [" + e["title"] + "](" + SITE + page_url(e) + "): " + e.get("answer", "") + "\n" for e in eps)
+    write("llms.txt", llms)
     for i, e in enumerate(eps):
         write("myths/%s/index.html" % e["slug"], build_myth(e, eps[i + 1] if i + 1 < len(eps) else None, eps[i - 1] if i else None))
     print("episodes:", len(eps), "latest:", day(eps[0]))
