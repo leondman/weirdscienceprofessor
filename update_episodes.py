@@ -93,7 +93,7 @@ def head(title, desc, path, image=LOGO, ld=None, noindex=False, wide=False):
          '<link rel="icon" href="%s">' % LOGO,
          '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
          '<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">',
-         '<link rel="stylesheet" href="/style.css">', '<script src="/theme.js"></script>']
+         '<link rel="stylesheet" href="/style.css?v=20261015-audit">', '<script src="/theme.js"></script>']
     if ld:
         h.append('<script type="application/ld+json">%s</script>' % json.dumps(ld, indent=1, ensure_ascii=False).replace("</", "<\\/"))
     h.append("</head><body>")
@@ -307,4 +307,9 @@ def main():
     print("episodes:", len(eps), "latest:", day(eps[0]))
 
 if __name__ == "__main__":
+    # Keep layout fixes with the generator and refresh cached styles.
+    style_path = os.path.join(OUT, "style.css")
+    css = open(style_path, encoding="utf-8").read()
+    if "/* Audit navigation wrap */" not in css:
+        write("style.css", css + "\n/* Audit navigation wrap */\n.pn a{white-space:normal;overflow-wrap:anywhere}\n")
     main()
