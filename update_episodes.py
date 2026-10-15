@@ -22,7 +22,7 @@ PATCH_FEED = "https://www.youtube.com/feeds/videos.xml?channel_id=UC4PbWZpyk-1IX
 PATCH_YT = "https://www.youtube.com/@PatchTheMachine"
 PATCH_TT = "https://www.tiktok.com/@patchthemachine"
 PATCH_IMG = "https://yt3.googleusercontent.com/mnnzj75qElrpmVF_cGCGKd4xmBNFYV_0-_C1IMsrFYxps_39R2ihGEWreIGWY0zdYhJVVTkQ=s900-c-k-c0x00ffffff-no-rj"
-LOGO = "https://yt3.googleusercontent.com/TfglslinqWTSdNONIyty7-Q0QOw-lytamex1bjZW9ej1w6FfMUSovXofqbcGPiXQVwI46Hu65w=s900-c-k-c0x00ffffff-no-rj"
+LOGO = "https://yt3.googleusercontent.com/-61qrc1KAk86H9EYhTvGIaIeQizxZhHso1X87l-x0fBHDOijWlBgYHQu3AfL5fsnu4N6y1HwJXI=s160-c-k-c0x00ffffff-no-rj"
 NS = {"a": "http://www.w3.org/2005/Atom", "m": "http://search.yahoo.com/mrss/",
       "y": "http://www.youtube.com/xml/schemas/2015"}
 E = lambda s: html.escape(s or "", quote=True)
@@ -135,7 +135,7 @@ def build_home(eps):
           '<h1>Weird Professor University</h1>'
           '<p class="lead">Confidently wrong about weird science. A manic professor gets everyday myths gloriously wrong. Then Fact Check interrupts with the real answer. New animated Shorts every day.</p>'
           '<div class="cta"><a class="btn" href="%s">Watch on YouTube</a><a class="btn ghost" href="%s">Follow on TikTok</a><a class="btn ghost" href="%s">Follow on Instagram</a></div></div>'
-          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles, pointing at you"></section>') % (YT, TT, IG, LOGO)
+          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a 3D cartoon scientist with wild teal hair, round black glasses and a white lab coat"></section>') % (YT, TT, IG, LOGO)
     p += SIGNUP
     p += ('<section id="latest"><h2>Latest myth</h2><a class="latest" href="%s"><img src="%s" alt="" width="480" height="360">'
           '<div><p class="kicker">%s</p><h3>%s</h3><p>%s</p><span class="btn">Read the fact check</span></div></a></section>') % (
@@ -199,7 +199,7 @@ def build_professor(eps):
           '<p class="lead">Wild teal hair, round glasses and total certainty. He has a theory about everything. Fact Check tests his claims.</p>'
           '<p>Each episode he explains a myth like he invented it. Then Fact Check cuts in with the real answer and the sources. He never learns.</p>'
           '<div class="cta"><a class="btn" href="/myths/">See his mistakes</a><a class="btn ghost" href="%s">Watch on YouTube</a></div></div>'
-          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a cartoon scientist with wild teal hair and yellow goggles"></section>') % (YT, LOGO)
+          '<img class="hero-img" src="%s" width="600" height="600" alt="The Weird Professor, a 3D cartoon scientist with wild teal hair, round black glasses and a white lab coat"></section>') % (YT, LOGO)
     p += ('<section><h2>Fact Check</h2><div class="char"><div class="fc" aria-hidden="true">FACT<br>CHECK</div>'
           '<div><h3>The correction bar</h3><p>Every claim ends with a sourced answer. Links to the sources are on every myth page.</p></div></div></section>')
     p += '<section><h2>His latest mistakes</h2><div class="grid">%s</div></section>' % "".join(card(e) for e in eps[:3])
