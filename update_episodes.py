@@ -22,7 +22,7 @@ PATCH_FEED = "https://www.youtube.com/feeds/videos.xml?channel_id=UC4PbWZpyk-1IX
 PATCH_YT = "https://www.youtube.com/@PatchTheMachine"
 PATCH_TT = "https://www.tiktok.com/@patchthemachine"
 PATCH_IMG = "https://yt3.googleusercontent.com/mnnzj75qElrpmVF_cGCGKd4xmBNFYV_0-_C1IMsrFYxps_39R2ihGEWreIGWY0zdYhJVVTkQ=s900-c-k-c0x00ffffff-no-rj"
-LOGO = "https://yt3.googleusercontent.com/-61qrc1KAk86H9EYhTvGIaIeQizxZhHso1X87l-x0fBHDOijWlBgYHQu3AfL5fsnu4N6y1HwJXI=s160-c-k-c0x00ffffff-no-rj"
+LOGO = "https://yt3.googleusercontent.com/-61qrc1KAk86H9EYhTvGIaIeQizxZhHso1X87l-x0fBHDOijWlBgYHQu3AfL5fsnu4N6y1HwJXI=s900-c-k-c0x00ffffff-no-rj"
 NS = {"a": "http://www.w3.org/2005/Atom", "m": "http://search.yahoo.com/mrss/",
       "y": "http://www.youtube.com/xml/schemas/2015"}
 E = lambda s: html.escape(s or "", quote=True)
