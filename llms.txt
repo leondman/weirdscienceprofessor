@@ -1,0 +1,32 @@
+# Weird Professor University
+
+> Animated science myth-busting by The Weird Professor, with sourced fact checks.
+
+The characters and animated stories are fiction. Source links and factual qualifications are on each episode page. Patch is a fictional engineering character; new Patch production is paused.
+
+## Main pages
+
+- [Home](https://weirdprofessoruniversity.com/)
+- [All myths](https://weirdprofessoruniversity.com/myths/)
+- [The Professor](https://weirdprofessoruniversity.com/professor/)
+- [Patch](https://weirdprofessoruniversity.com/patch/)
+
+## Follow
+
+- [YouTube](https://www.youtube.com/@WeirdScienceProfessor)
+- [TikTok](https://www.tiktok.com/@weirdscienceprofessor)
+- [Instagram](https://www.instagram.com/weirdprofessoruniversity/)
+
+## Fact checks
+
+- [Swallowed gum does NOT stay for seven years.](https://weirdprofessoruniversity.com/myths/swallowed-gum-does-not-stay-for-seven-years/): It does not. Your body cannot digest chewing gum, but swallowed gum moves relatively intact through your digestive system and passes out in your stool. Very rarely, large amounts of swallowed gum combined with constipation have blocked intestines in children. Do not make swallowing gum a habit.
+- [Bats are NOT blind. The 'blind as a bat' myth is wrong.](https://weirdprofessoruniversity.com/myths/bats-are-not-blind-the-blind-as-a-bat-myth-is-wrong/): They are not. All bats have working eyes and can see. Vision varies by species, and some bats see better than people in the dark. Many bats use echolocation and sight together.
+- [Sugar does NOT make kids hyper](https://weirdprofessoruniversity.com/myths/sugar-does-not-make-kids-hyper/): It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.
+- [Cracking your knuckles does NOT cause arthritis](https://weirdprofessoruniversity.com/myths/cracking-your-knuckles-does-not-cause-arthritis/): It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.
+- [5 Things Your Parents Told You That Are All Wrong (Fact-Checked)](https://weirdprofessoruniversity.com/myths/5-things-your-parents-told-you-that-are-all-wrong-fact-check/): Wet hair does not cause a cold: viruses do. A 1995 JAMA meta-analysis found no overall effect of sugar on children's behaviour or cognition, while noting that a small effect or effects in subsets of children cannot be ruled out. Knuckle-cracking studies have not found higher arthritis rates; Donald Unger's one-person experiment was a memorable example, not proof on its own. Movement, not a special hatred of red, draws a bull's attention. NASA says the Great Wall is not visible from the Moon and is difficult or impossible to see unaided from Earth orbit.
+- [The Professor Got All 5 Wrong](https://weirdprofessoruniversity.com/myths/the-professor-got-all-5-wrong/): Over a day we use virtually every part of the brain, not just 10%. Shaving does not change hair thickness, colour or growth rate: a blunt tip can feel coarser. Goldfish can learn and retain information far longer than three seconds, including for months. Lightning can strike the same place repeatedly, especially tall isolated objects. Swallowed gum usually passes through relatively intact rather than staying for seven years, though large amounts combined with constipation can rarely cause a blockage in children.
+- [Goldfish remember for months. Not 3 seconds.](https://weirdprofessoruniversity.com/myths/goldfish-memory-3-seconds/): They don't. Goldfish can learn and remember things for months. In experiments they learn feeding times, which side of the tank food arrives on, and which coloured paddle to push, and they still remember it long after the training.
+- [Shaving doesn't thicken hair. The razor tip tricks your eyes.](https://weirdprofessoruniversity.com/myths/shaving-thicker-hair/): It doesn't. Shaving cuts each hair straight across at its widest point, so the regrowing stubble has a blunt tip instead of a fine tapered one. That makes it feel coarser and look darker. The hair itself, and the follicle under the skin, are unchanged.
+- [You DON'T use just 10% of your brain](https://weirdprofessoruniversity.com/myths/use-10-percent-of-brain/): You use all of it. Brain scans show activity across the whole brain over a day, and even during sleep many regions stay busy. Damage to almost any part of the brain has effects, which would not be true if 90% sat idle.
+- [Lightning DOES strike twice](https://weirdprofessoruniversity.com/myths/lightning-strike-twice/): It does, and often. Tall, pointed and isolated objects get hit again and again, sometimes more than once in a single storm. Lightning does not avoid places it has already hit.
+- [Your stomach can dissolve a razor blade](https://weirdprofessoruniversity.com/myths/stomach-acid-razor-blade/): In a laboratory study, simulated gastric juice corroded razor blades over time. After 24 hours the blades weighed 63% of their original weight. This does not make swallowing metal safe: sharp objects can cause serious injury. Never try it. A lab corrosion result is not a safe way to remove a swallowed object.
