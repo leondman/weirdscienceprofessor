@@ -70,3 +70,10 @@ a.thumb{aspect-ratio:4/5}a.thumb img{object-position:center 25%}
 @media(max-width:420px){.top{gap:8px 10px}.brand{width:100%;font-size:21px}nav{flex:1}nav a{font-size:15px;margin-right:10px}.theme-toggle{font-size:13px;padding:10px}.char{flex-wrap:wrap}}
 nav{display:flex;flex-wrap:wrap;gap:4px 18px}nav a{margin-right:0;white-space:nowrap}
 @media(max-width:420px){nav{gap:4px 10px}}
+/* Audit fixes: preserve long-form framing and readable source links. */
+a.thumb.landscape{aspect-ratio:16/9}a.thumb.landscape img{object-fit:contain;object-position:center}
+.frame.solo.landscape{aspect-ratio:16/9;max-width:680px}
+.box.src a{overflow-wrap:anywhere}
+.follow{max-width:1000px;margin:40px auto 0;padding:28px 20px;border-top:1px solid var(--rule)}
+.follow h2{font-size:28px;margin-bottom:8px}.follow p{margin:0}
+@media(max-width:360px){.grid,.chars{grid-template-columns:minmax(0,1fr)}}
