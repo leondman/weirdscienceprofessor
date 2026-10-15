@@ -249,6 +249,7 @@ def write(path, text):
 
 # Curated fact-check text and source links (verified Oct 13 2026). Applied over episodes.json.
 EXTRA = {
+ "x4RDUeQ_z18": {"myth": "Carrots give you superhuman night vision.", "answer": "Carrots contain beta-carotene, which the body can convert into vitamin A. Vitamin A helps normal vision in dim light. Adequate vitamin A supports eye health, but it cannot give night-vision superpowers. Deficiency can cause night blindness; treating a deficiency is different from boosting normal vision.", "source_links": [["NHS: Vitamin A", "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-a/"], ["Harvard Nutrition Source: Vitamin A", "https://nutritionsource.hsph.harvard.edu/vitamin-a/"]]},
  "r6oXqGYx-Y8": {"source_links": [["Live Science: Do goldfish really have a 3-second memory?", "https://www.livescience.com/goldfish-memory.html"]]},
  "hm7paKmi7TE": {"source_links": [["Mayo Clinic: Does shaved hair grow back thicker?", "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"]]},
  "NVF6kUCAdhg": {"source_links": [["Scientific American: Do People Only Use 10 Percent of Their Brains?", "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"]]},
