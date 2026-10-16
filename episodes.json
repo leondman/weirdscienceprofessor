@@ -1,5 +1,24 @@
 [
  {
+  "myth": "The tongue has separate zones that can each taste only one flavour.",
+  "answer": "There are five basic tastes: sweet, sour, bitter, salty and umami. Different types of taste cells are scattered throughout the tongue rather than confined to exclusive taste zones. Sensitivity can vary between regions, but the familiar taste map is misleading. Flavour also depends on smell, texture and temperature.",
+  "source_links": [
+   [
+    "NIH/NIDCD: Taste Disorders",
+    "https://www.nidcd.nih.gov/health/taste-disorders"
+   ],
+   [
+    "Harvard Health: The myth of tongue and taste",
+    "https://www.health.harvard.edu/diet-and-nutrition/the-myth-of-tongue-and-taste"
+   ]
+  ],
+  "id": "mLgBaP5NirM",
+  "title": "Your tongue does not have separate taste zones.",
+  "published": "2026-10-16",
+  "sources": "NIH/NIDCD; Harvard Health",
+  "slug": "your-tongue-does-not-have-separate-taste-zones"
+ },
+ {
   "id": "x4RDUeQ_z18",
   "title": "Carrots won't give you night vision.",
   "published": "2026-10-15T17:00:28+00:00",
