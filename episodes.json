@@ -1,308 +1,308 @@
 [
-  {
-    "myth": "Tesla's Roadster cold-gas thruster demo was faked. A car cannot drive up a ramp, hang upside-down, or do nought to sixty in about a second.",
-    "answer": "The demo was real. At the 15 October launch the Roadster drove up a C-shaped ramp, hung upside-down, jumped and hovered on cold-gas thrusters. Thrusters push the car directly, so they do not rely on tyre grip - the normal limit on how fast a car can launch. Nought to sixty in about a second works out at roughly 2.5 g. The catch: a tank of compressed gas empties in seconds.",
-    "source_links": [
-      [
-        "Torque News: Doing the math on the Roadster 0-60 claim",
-        "https://www.torquenews.com/14093/doing-math-tesla-roadster-0-60-11-seconds-claim-and-what-was-determined"
-      ],
-      [
-        "Engadget: Relive Tesla's ridiculously fun Roadster stunt show",
-        "https://www.engadget.com/2288448/relive-tesla-ridiculously-fun-roadster-stunt-show/"
-      ],
-      [
-        "Snopes: Is Tesla's flying Roadster real?",
-        "https://www.snopes.com/fact-check/tesla-flying-roadster-car-real/"
-      ],
-      [
-        "Tesla: The Ramp (official launch video)",
-        "https://youtu.be/7p5LxFdc-Qg"
-      ]
-    ],
-    "id": "oJ88EAZDnkY",
-    "title": "A rocket-powered car sounds fake. The physics says otherwise.",
-    "published": "2026-10-17T09:53:13+00:00",
-    "slug": "a-rocket-powered-car-sounds-fake-the-physics-says-otherwise",
-    "sources": "Torque News; Engadget; Snopes"
-  },
-  {
-    "myth": "A chameleon can change colour to match any background or pattern.",
-    "answer": "Each chameleon species has a limited range of colours and patterns. Small shifts can help some blend in, but no chameleon can copy a chessboard or wallpaper. The bigger colour displays are mostly communication - rivals, mates, mood, temperature.",
-    "source_links": [
-      [
-        "San Diego Zoo: Chameleon",
-        "https://animals.sandiegozoo.org/animals/chameleon"
-      ],
-      [
-        "National Geographic: Chameleon color myth",
-        "https://www.nationalgeographic.com/animals/article/chameleon-camouflage-color-change-myth-news"
-      ]
-    ],
-    "id": "BbBK9yvKaaM",
-    "title": "Chameleons cannot copy any background.",
-    "published": "2026-10-17T09:00:32+00:00",
-    "slug": "chameleons-cannot-copy-any-background",
-    "sources": "San Diego Zoo; National Geographic"
-  },
-  {
-    "myth": "The tongue has separate zones that can each taste only one flavour.",
-    "answer": "There are five basic tastes: sweet, sour, bitter, salty and umami. Different types of taste cells are scattered throughout the tongue rather than confined to exclusive taste zones. Sensitivity can vary between regions, but the familiar taste map is misleading. Flavour also depends on smell, texture and temperature.",
-    "source_links": [
-      [
-        "NIH/NIDCD: Taste Disorders",
-        "https://www.nidcd.nih.gov/health/taste-disorders"
-      ],
-      [
-        "Harvard Health: The myth of tongue and taste",
-        "https://www.health.harvard.edu/diet-and-nutrition/the-myth-of-tongue-and-taste"
-      ]
-    ],
-    "id": "mLgBaP5NirM",
-    "title": "Your tongue does not have separate taste zones.",
-    "published": "2026-10-16",
-    "sources": "NIH/NIDCD; Harvard Health",
-    "slug": "your-tongue-does-not-have-separate-taste-zones"
-  },
-  {
-    "id": "x4RDUeQ_z18",
-    "title": "Carrots won't give you night vision.",
-    "published": "2026-10-15T17:00:28+00:00",
-    "sources": "NHS; Harvard T.H. Chan School of Public Health, The Nutrition Source",
-    "slug": "carrots-won-t-give-you-night-vision",
-    "myth": "Carrots give you superhuman night vision.",
-    "answer": "Carrots contain beta-carotene, which the body can convert into vitamin A. Vitamin A helps normal vision in dim light. Adequate vitamin A supports eye health, but it cannot give night-vision superpowers. Deficiency can cause night blindness; treating a deficiency is different from boosting normal vision.",
-    "source_links": [
-      [
-        "NHS: Vitamin A",
-        "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-a/"
-      ],
-      [
-        "Harvard Nutrition Source: Vitamin A",
-        "https://nutritionsource.hsph.harvard.edu/vitamin-a/"
-      ]
-    ]
-  },
-  {
-    "id": "K13pEc5kgU4",
-    "title": "Swallowed gum does NOT stay for seven years.",
-    "published": "2026-10-14T18:40:03+00:00",
-    "sources": "Mayo Clinic",
-    "myth": "Swallowed gum stays in your stomach for seven years.",
-    "answer": "It does not. Your body cannot digest chewing gum, but swallowed gum moves relatively intact through your digestive system and passes out in your stool. Very rarely, large amounts of swallowed gum combined with constipation have blocked intestines in children. Do not make swallowing gum a habit.",
-    "source_links": [
-      [
-        "Mayo Clinic: Swallowing gum: Is it harmful?",
-        "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"
-      ]
-    ],
-    "slug": "swallowed-gum-does-not-stay-for-seven-years"
-  },
-  {
-    "id": "TWELor9a07U",
-    "title": "Bats are NOT blind. The 'blind as a bat' myth is wrong.",
-    "published": "2026-10-13T18:00:41+00:00",
-    "sources": "Bat Conservation International, USGS, Current Biology",
-    "slug": "bats-are-not-blind-the-blind-as-a-bat-myth-is-wrong",
-    "myth": "Bats are blind.",
-    "answer": "They are not. All bats have working eyes and can see. Vision varies by species, and some bats see better than people in the dark. Many bats use echolocation and sight together.",
-    "source_links": [
-      [
-        "Bat Conservation International: Blind as a Bat? No Such Thing",
-        "https://www.batcon.org/blind-as-a-bat-no-such-thing/"
-      ],
-      [
-        "USGS: Are bats blind?",
-        "https://www.usgs.gov/faqs/are-bats-blind"
-      ],
-      [
-        "Current Biology: Bats: Vision or echolocation, why not both?",
-        "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"
-      ]
-    ]
-  },
-  {
-    "id": "DyRHnBbYyZo",
-    "title": "Sugar does NOT make kids hyper",
-    "published": "2026-10-13T17:20:45+00:00",
-    "sources": "JAMA, Vanderbilt",
-    "slug": "sugar-does-not-make-kids-hyper",
-    "myth": "Sugar makes kids hyper.",
-    "answer": "It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.",
-    "source_links": [
-      [
-        "Wolraich, Wilson and White, JAMA 1995: The Effect of Sugar on Behavior or Cognition in Children (meta-analysis)",
-        "https://jamanetwork.com/journals/jama/article-abstract/391812"
-      ]
-    ]
-  },
-  {
-    "id": "zVBzxKlpXZw",
-    "title": "Cracking your knuckles does NOT cause arthritis",
-    "published": "2026-10-13T13:04:35+00:00",
-    "sources": "Harvard Health",
-    "slug": "cracking-your-knuckles-does-not-cause-arthritis",
-    "myth": "Cracking your knuckles gives you arthritis.",
-    "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
-    "source_links": [
-      [
-        "Harvard Health: Does cracking knuckles cause arthritis?",
-        "https://www.health.harvard.edu/pain/does-cracking-knuckles-cause-arthritis"
-      ]
-    ]
-  },
-  {
-    "id": "1mYke4OsLow",
-    "title": "5 Things Your Parents Told You That Are All Wrong (Fact-Checked)",
-    "published": "2026-10-13T06:13:48+00:00",
-    "sources": "Mayo Clinic (colds and wet hair); JAMA 1995 meta-analysis (Wolraich, Wilson and White); Arthritis & Rheumatism 1998 (Donald Unger) and Scientific American; Live Science (bulls and the color red); NASA and Yang Liwei's 2003 interview (Great Wall)",
-    "slug": "5-things-your-parents-told-you-that-are-all-wrong-fact-check",
-    "format": "landscape",
-    "myth": "Wet hair causes colds; sugar makes children hyper; knuckle cracking causes arthritis; bulls hate red; the Great Wall is easy to see from space.",
-    "answer": "Wet hair does not cause a cold: viruses do. A 1995 JAMA meta-analysis found no overall effect of sugar on children's behaviour or cognition, while noting that a small effect or effects in subsets of children cannot be ruled out. Knuckle-cracking studies have not found higher arthritis rates; Donald Unger's one-person experiment was a memorable example, not proof on its own. Movement, not a special hatred of red, draws a bull's attention. NASA says the Great Wall is not visible from the Moon and is difficult or impossible to see unaided from Earth orbit.",
-    "source_links": [
-      [
-        "Mayo Clinic: Myths about catching a cold",
-        "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-q-and-a-myths-about-catching-a-cold/"
-      ],
-      [
-        "Wolraich, Wilson and White, JAMA 1995: Sugar meta-analysis",
-        "https://jamanetwork.com/journals/jama/article-abstract/391812"
-      ],
-      [
-        "Scientific American: Crack Research",
-        "https://www.scientificamerican.com/article/crack-research/"
-      ],
-      [
-        "Live Science: Why Do Bulls Charge When They See Red?",
-        "https://www.livescience.com/33700-bulls-charge-red.html"
-      ],
-      [
-        "NASA: Great Wall",
-        "https://www.nasa.gov/image-article/great-wall/"
-      ]
-    ]
-  },
-  {
-    "id": "xKAbWN8G-NY",
-    "title": "The Professor Got All 5 Wrong",
-    "published": "2026-10-12T21:37:14+00:00",
-    "sources": "Johns Hopkins (Barry Gordon), Mayo Clinic, Scientific American, Journal of Investigative Dermatology (Lynfield and MacWilliams, 1970), University of Plymouth (reported by The Guardian), US National Weather Service, Live Science (Martin Uman, University of Florida), Nemours (David Milov, via Scientific American)",
-    "slug": "the-professor-got-all-5-wrong",
-    "format": "landscape",
-    "myth": "We use only 10% of our brains; shaving thickens hair; goldfish remember for three seconds; lightning never strikes twice; gum stays in the stomach for seven years.",
-    "answer": "Over a day we use virtually every part of the brain, not just 10%. Shaving does not change hair thickness, colour or growth rate: a blunt tip can feel coarser. Goldfish can learn and retain information far longer than three seconds, including for months. Lightning can strike the same place repeatedly, especially tall isolated objects. Swallowed gum usually passes through relatively intact rather than staying for seven years, though large amounts combined with constipation can rarely cause a blockage in children.",
-    "source_links": [
-      [
-        "Scientific American: The 10% brain myth",
-        "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"
-      ],
-      [
-        "Mayo Clinic: Shaving and hair thickness",
-        "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"
-      ],
-      [
-        "Live Science: Goldfish memory",
-        "https://www.livescience.com/goldfish-memory.html"
-      ],
-      [
-        "The Guardian: Plymouth feeding-lever research",
-        "https://www.theguardian.com/uk/2003/oct/01/highereducation.science"
-      ],
-      [
-        "US National Weather Service: Lightning Myths",
-        "https://www.weather.gov/safety/lightning-myths"
-      ],
-      [
-        "Live Science: Repeated Empire State Building strikes",
-        "https://www.livescience.com/13704-empire-state-building-lightning-strike.html"
-      ],
-      [
-        "Mayo Clinic: Swallowing gum",
-        "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"
-      ]
-    ]
-  },
-  {
-    "id": "r6oXqGYx-Y8",
-    "title": "Goldfish remember for months. Not 3 seconds.",
-    "published": "2026-10-12T17:42:50+00:00",
-    "description": "The Professor gets it wrong. Fact Check has the real answer.",
-    "slug": "goldfish-memory-3-seconds",
-    "myth": "Goldfish only have a 3-second memory.",
-    "answer": "They don't. Goldfish can learn and remember things for months. In experiments they learn feeding times, which side of the tank food arrives on, and which coloured paddle to push, and they still remember it long after the training.",
-    "sources": "Live Science (Culum Brown, Macquarie University)",
-    "source_links": [
-      [
-        "Live Science: Do goldfish really have a 3-second memory?",
-        "https://www.livescience.com/goldfish-memory.html"
-      ]
-    ]
-  },
-  {
-    "id": "hm7paKmi7TE",
-    "title": "Shaving doesn't thicken hair. The razor tip tricks your eyes.",
-    "published": "2026-10-12T17:20:10+00:00",
-    "description": "The Professor gets it wrong. Fact Check has the real answer.",
-    "slug": "shaving-thicker-hair",
-    "myth": "Shaving makes your hair grow back thicker.",
-    "answer": "It doesn't. Shaving cuts each hair straight across at its widest point, so the regrowing stubble has a blunt tip instead of a fine tapered one. That makes it feel coarser and look darker. The hair itself, and the follicle under the skin, are unchanged.",
-    "sources": "Mayo Clinic, Scientific American",
-    "source_links": [
-      [
-        "Mayo Clinic: Does shaved hair grow back thicker?",
-        "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"
-      ]
-    ]
-  },
-  {
-    "id": "NVF6kUCAdhg",
-    "title": "You DON'T use just 10% of your brain",
-    "published": "2026-10-12T10:56:12+00:00",
-    "description": "The Professor gets it wrong. Fact Check has the real answer. Source: Scientific American.",
-    "slug": "use-10-percent-of-brain",
-    "myth": "You only use 10% of your brain.",
-    "answer": "You use all of it. Brain scans show activity across the whole brain over a day, and even during sleep many regions stay busy. Damage to almost any part of the brain has effects, which would not be true if 90% sat idle.",
-    "sources": "Scientific American (neurologists Barry Gordon, Johns Hopkins, and John Henley, Mayo Clinic)",
-    "source_links": [
-      [
-        "Scientific American: Do People Only Use 10 Percent of Their Brains?",
-        "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"
-      ]
-    ]
-  },
-  {
-    "id": "GjGkIfn5I2k",
-    "title": "Lightning DOES strike twice",
-    "published": "2026-10-11T13:35:55+00:00",
-    "description": "The Professor insists lightning never strikes the same place twice. Fact Check shows it does, all the time.",
-    "duration": "PT52S",
-    "slug": "lightning-strike-twice",
-    "myth": "Lightning never strikes the same place twice.",
-    "answer": "It does, and often. Tall, pointed and isolated objects get hit again and again, sometimes more than once in a single storm. Lightning does not avoid places it has already hit.",
-    "sources": "US National Weather Service, Live Science (lightning expert Martin Uman, University of Florida)",
-    "source_links": [
-      [
-        "US National Weather Service: Lightning Myths",
-        "https://www.weather.gov/safety/lightning-myths"
-      ]
-    ]
-  },
-  {
-    "id": "0zclC4hWPQ4",
-    "title": "Your stomach can dissolve a razor blade",
-    "published": "2026-10-11T12:47:44+00:00",
-    "description": "The Professor is horrified by what stomach acid can do. Fact Check explains the catch.",
-    "duration": "PT51S",
-    "slug": "stomach-acid-razor-blade",
-    "myth": "Your stomach acid can dissolve a razor blade.",
-    "answer": "In a laboratory study, simulated gastric juice corroded razor blades over time. After 24 hours the blades weighed 63% of their original weight. This does not make swallowing metal safe: sharp objects can cause serious injury. Never try it. A lab corrosion result is not a safe way to remove a swallowed object.",
-    "sources": "Li et al., \"In vitro effects of simulated gastric juice on swallowed metal objects\" (PubMed), Africa Check",
-    "source_links": [
-      [
-        "Li et al., 1997: In vitro effects of simulated gastric juice on swallowed metal objects (PubMed)",
-        "https://pubmed.ncbi.nlm.nih.gov/9283866/"
-      ]
-    ]
-  }
+ {
+  "myth": "Tesla's Roadster cold-gas thruster demo was faked. A car cannot drive up a ramp, hang upside-down, or do nought to sixty in about a second.",
+  "answer": "The demo was real. At the 15 October launch the Roadster drove up a C-shaped ramp, hung upside-down, jumped and hovered on cold-gas thrusters. Thrusters push the car directly, so they do not rely on tyre grip - the normal limit on how fast a car can launch. Nought to sixty in about a second works out at roughly 2.5 g. The catch: a tank of compressed gas empties in seconds.",
+  "source_links": [
+   [
+    "Torque News: Doing the math on the Roadster 0-60 claim",
+    "https://www.torquenews.com/14093/doing-math-tesla-roadster-0-60-11-seconds-claim-and-what-was-determined"
+   ],
+   [
+    "Engadget: Relive Tesla's ridiculously fun Roadster stunt show",
+    "https://www.engadget.com/2288448/relive-tesla-ridiculously-fun-roadster-stunt-show/"
+   ],
+   [
+    "Snopes: Is Tesla's flying Roadster real?",
+    "https://www.snopes.com/fact-check/tesla-flying-roadster-car-real/"
+   ],
+   [
+    "Tesla: The Ramp (official launch video)",
+    "https://youtu.be/7p5LxFdc-Qg"
+   ]
+  ],
+  "id": "oJ88EAZDnkY",
+  "title": "A rocket-powered car sounds fake. The physics says otherwise.",
+  "published": "2026-10-17T09:53:13+00:00",
+  "slug": "a-rocket-powered-car-sounds-fake-the-physics-says-otherwise",
+  "sources": "Torque News; Engadget; Snopes"
+ },
+ {
+  "myth": "A chameleon can change colour to match any background or pattern.",
+  "answer": "Each chameleon species has a limited range of colours and patterns. Small shifts can help some blend in, but no chameleon can copy a chessboard or wallpaper. The bigger colour displays are mostly communication - rivals, mates, mood, temperature.",
+  "source_links": [
+   [
+    "San Diego Zoo: Chameleon",
+    "https://animals.sandiegozoo.org/animals/chameleon"
+   ],
+   [
+    "National Geographic: Chameleon color myth",
+    "https://www.nationalgeographic.com/animals/article/chameleon-camouflage-color-change-myth-news"
+   ]
+  ],
+  "id": "BbBK9yvKaaM",
+  "title": "Chameleons cannot copy any background.",
+  "published": "2026-10-17T09:00:32+00:00",
+  "slug": "chameleons-cannot-copy-any-background",
+  "sources": "San Diego Zoo; National Geographic"
+ },
+ {
+  "myth": "The tongue has separate zones that can each taste only one flavour.",
+  "answer": "There are five basic tastes: sweet, sour, bitter, salty and umami. Different types of taste cells are scattered throughout the tongue rather than confined to exclusive taste zones. Sensitivity can vary between regions, but the familiar taste map is misleading. Flavour also depends on smell, texture and temperature.",
+  "source_links": [
+   [
+    "NIH/NIDCD: Taste Disorders",
+    "https://www.nidcd.nih.gov/health/taste-disorders"
+   ],
+   [
+    "Harvard Health: The myth of tongue and taste",
+    "https://www.health.harvard.edu/diet-and-nutrition/the-myth-of-tongue-and-taste"
+   ]
+  ],
+  "id": "mLgBaP5NirM",
+  "title": "Your tongue does not have separate taste zones.",
+  "published": "2026-10-16",
+  "sources": "NIH/NIDCD; Harvard Health",
+  "slug": "your-tongue-does-not-have-separate-taste-zones"
+ },
+ {
+  "id": "x4RDUeQ_z18",
+  "title": "Carrots won't give you night vision.",
+  "published": "2026-10-15T17:00:28+00:00",
+  "sources": "NHS; Harvard T.H. Chan School of Public Health, The Nutrition Source",
+  "slug": "carrots-won-t-give-you-night-vision",
+  "myth": "Carrots give you superhuman night vision.",
+  "answer": "Carrots contain beta-carotene, which the body can convert into vitamin A. Vitamin A helps normal vision in dim light. Adequate vitamin A supports eye health, but it cannot give night-vision superpowers. Deficiency can cause night blindness; treating a deficiency is different from boosting normal vision.",
+  "source_links": [
+   [
+    "NHS: Vitamin A",
+    "https://www.nhs.uk/conditions/vitamins-and-minerals/vitamin-a/"
+   ],
+   [
+    "Harvard Nutrition Source: Vitamin A",
+    "https://nutritionsource.hsph.harvard.edu/vitamin-a/"
+   ]
+  ]
+ },
+ {
+  "id": "K13pEc5kgU4",
+  "title": "Swallowed gum does NOT stay for seven years.",
+  "published": "2026-10-14T18:40:03+00:00",
+  "sources": "Mayo Clinic",
+  "myth": "Swallowed gum stays in your stomach for seven years.",
+  "answer": "It does not. Your body cannot digest chewing gum, but swallowed gum moves relatively intact through your digestive system and passes out in your stool. Very rarely, large amounts of swallowed gum combined with constipation have blocked intestines in children. Do not make swallowing gum a habit.",
+  "source_links": [
+   [
+    "Mayo Clinic: Swallowing gum: Is it harmful?",
+    "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"
+   ]
+  ],
+  "slug": "swallowed-gum-does-not-stay-for-seven-years"
+ },
+ {
+  "id": "TWELor9a07U",
+  "title": "Bats are NOT blind. The 'blind as a bat' myth is wrong.",
+  "published": "2026-10-13T18:00:41+00:00",
+  "sources": "Bat Conservation International, USGS, Current Biology",
+  "slug": "bats-are-not-blind-the-blind-as-a-bat-myth-is-wrong",
+  "myth": "Bats are blind.",
+  "answer": "They are not. All bats have working eyes and can see. Vision varies by species, and some bats see better than people in the dark. Many bats use echolocation and sight together.",
+  "source_links": [
+   [
+    "Bat Conservation International: Blind as a Bat? No Such Thing",
+    "https://www.batcon.org/blind-as-a-bat-no-such-thing/"
+   ],
+   [
+    "USGS: Are bats blind?",
+    "https://www.usgs.gov/faqs/are-bats-blind"
+   ],
+   [
+    "Current Biology: Bats: Vision or echolocation, why not both?",
+    "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"
+   ]
+  ]
+ },
+ {
+  "id": "DyRHnBbYyZo",
+  "title": "Sugar does NOT make kids hyper",
+  "published": "2026-10-13T17:20:45+00:00",
+  "sources": "JAMA, Vanderbilt",
+  "slug": "sugar-does-not-make-kids-hyper",
+  "myth": "Sugar makes kids hyper.",
+  "answer": "It does not. A 1995 JAMA meta-analysis pooled 23 blinded, placebo-controlled studies and found that sugar does not affect children's behaviour or thinking. Parents who expect a sugar rush tend to see one, which is expectation. The authors note a small effect, or an effect in some subsets of children, can't be ruled out.",
+  "source_links": [
+   [
+    "Wolraich, Wilson and White, JAMA 1995: The Effect of Sugar on Behavior or Cognition in Children (meta-analysis)",
+    "https://jamanetwork.com/journals/jama/article-abstract/391812"
+   ]
+  ]
+ },
+ {
+  "id": "zVBzxKlpXZw",
+  "title": "Cracking your knuckles does NOT cause arthritis",
+  "published": "2026-10-13T13:04:35+00:00",
+  "sources": "Harvard Health",
+  "slug": "cracking-your-knuckles-does-not-cause-arthritis",
+  "myth": "Cracking your knuckles gives you arthritis.",
+  "answer": "It probably doesn't. Studies comparing habitual knuckle-crackers with non-crackers found no higher rate of hand arthritis. There is a catch: chronic cracking may reduce grip strength, and a couple of injuries have been reported.",
+  "source_links": [
+   [
+    "Harvard Health: Does cracking knuckles cause arthritis?",
+    "https://www.health.harvard.edu/pain/does-cracking-knuckles-cause-arthritis"
+   ]
+  ]
+ },
+ {
+  "id": "1mYke4OsLow",
+  "title": "5 Things Your Parents Told You That Are All Wrong (Fact-Checked)",
+  "published": "2026-10-13T06:13:48+00:00",
+  "sources": "Mayo Clinic (colds and wet hair); JAMA 1995 meta-analysis (Wolraich, Wilson and White); Arthritis & Rheumatism 1998 (Donald Unger) and Scientific American; Live Science (bulls and the color red); NASA and Yang Liwei's 2003 interview (Great Wall)",
+  "slug": "5-things-your-parents-told-you-that-are-all-wrong-fact-check",
+  "format": "landscape",
+  "myth": "Wet hair causes colds; sugar makes children hyper; knuckle cracking causes arthritis; bulls hate red; the Great Wall is easy to see from space.",
+  "answer": "Wet hair does not cause a cold: viruses do. A 1995 JAMA meta-analysis found no overall effect of sugar on children's behaviour or cognition, while noting that a small effect or effects in subsets of children cannot be ruled out. Knuckle-cracking studies have not found higher arthritis rates; Donald Unger's one-person experiment was a memorable example, not proof on its own. Movement, not a special hatred of red, draws a bull's attention. NASA says the Great Wall is not visible from the Moon and is difficult or impossible to see unaided from Earth orbit.",
+  "source_links": [
+   [
+    "Mayo Clinic: Myths about catching a cold",
+    "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-q-and-a-myths-about-catching-a-cold/"
+   ],
+   [
+    "Wolraich, Wilson and White, JAMA 1995: Sugar meta-analysis",
+    "https://jamanetwork.com/journals/jama/article-abstract/391812"
+   ],
+   [
+    "Scientific American: Crack Research",
+    "https://www.scientificamerican.com/article/crack-research/"
+   ],
+   [
+    "Live Science: Why Do Bulls Charge When They See Red?",
+    "https://www.livescience.com/33700-bulls-charge-red.html"
+   ],
+   [
+    "NASA: Great Wall",
+    "https://www.nasa.gov/image-article/great-wall/"
+   ]
+  ]
+ },
+ {
+  "id": "xKAbWN8G-NY",
+  "title": "The Professor Got All 5 Wrong",
+  "published": "2026-10-12T21:37:14+00:00",
+  "sources": "Johns Hopkins (Barry Gordon), Mayo Clinic, Scientific American, Journal of Investigative Dermatology (Lynfield and MacWilliams, 1970), University of Plymouth (reported by The Guardian), US National Weather Service, Live Science (Martin Uman, University of Florida), Nemours (David Milov, via Scientific American)",
+  "slug": "the-professor-got-all-5-wrong",
+  "format": "landscape",
+  "myth": "We use only 10% of our brains; shaving thickens hair; goldfish remember for three seconds; lightning never strikes twice; gum stays in the stomach for seven years.",
+  "answer": "Over a day we use virtually every part of the brain, not just 10%. Shaving does not change hair thickness, colour or growth rate: a blunt tip can feel coarser. Goldfish can learn and retain information far longer than three seconds, including for months. Lightning can strike the same place repeatedly, especially tall isolated objects. Swallowed gum usually passes through relatively intact rather than staying for seven years, though large amounts combined with constipation can rarely cause a blockage in children.",
+  "source_links": [
+   [
+    "Scientific American: The 10% brain myth",
+    "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"
+   ],
+   [
+    "Mayo Clinic: Shaving and hair thickness",
+    "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"
+   ],
+   [
+    "Live Science: Goldfish memory",
+    "https://www.livescience.com/goldfish-memory.html"
+   ],
+   [
+    "The Guardian: Plymouth feeding-lever research",
+    "https://www.theguardian.com/uk/2003/oct/01/highereducation.science"
+   ],
+   [
+    "US National Weather Service: Lightning Myths",
+    "https://www.weather.gov/safety/lightning-myths"
+   ],
+   [
+    "Live Science: Repeated Empire State Building strikes",
+    "https://www.livescience.com/13704-empire-state-building-lightning-strike.html"
+   ],
+   [
+    "Mayo Clinic: Swallowing gum",
+    "https://www.mayoclinic.org/diseases-conditions/indigestion/expert-answers/digestive-system/faq-20058446"
+   ]
+  ]
+ },
+ {
+  "id": "r6oXqGYx-Y8",
+  "title": "Goldfish remember for months. Not 3 seconds.",
+  "published": "2026-10-12T17:42:50+00:00",
+  "description": "The Professor gets it wrong. Fact Check has the real answer.",
+  "slug": "goldfish-memory-3-seconds",
+  "myth": "Goldfish only have a 3-second memory.",
+  "answer": "They don't. Goldfish can learn and remember things for months. In experiments they learn feeding times, which side of the tank food arrives on, and which coloured paddle to push, and they still remember it long after the training.",
+  "sources": "Live Science (Culum Brown, Macquarie University)",
+  "source_links": [
+   [
+    "Live Science: Do goldfish really have a 3-second memory?",
+    "https://www.livescience.com/goldfish-memory.html"
+   ]
+  ]
+ },
+ {
+  "id": "hm7paKmi7TE",
+  "title": "Shaving doesn't thicken hair. The razor tip tricks your eyes.",
+  "published": "2026-10-12T17:20:10+00:00",
+  "description": "The Professor gets it wrong. Fact Check has the real answer.",
+  "slug": "shaving-thicker-hair",
+  "myth": "Shaving makes your hair grow back thicker.",
+  "answer": "It doesn't. Shaving cuts each hair straight across at its widest point, so the regrowing stubble has a blunt tip instead of a fine tapered one. That makes it feel coarser and look darker. The hair itself, and the follicle under the skin, are unchanged.",
+  "sources": "Mayo Clinic, Scientific American",
+  "source_links": [
+   [
+    "Mayo Clinic: Does shaved hair grow back thicker?",
+    "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/hair-removal/faq-20058427"
+   ]
+  ]
+ },
+ {
+  "id": "NVF6kUCAdhg",
+  "title": "You DON'T use just 10% of your brain",
+  "published": "2026-10-12T10:56:12+00:00",
+  "description": "The Professor gets it wrong. Fact Check has the real answer. Source: Scientific American.",
+  "slug": "use-10-percent-of-brain",
+  "myth": "You only use 10% of your brain.",
+  "answer": "You use all of it. Brain scans show activity across the whole brain over a day, and even during sleep many regions stay busy. Damage to almost any part of the brain has effects, which would not be true if 90% sat idle.",
+  "sources": "Scientific American (neurologists Barry Gordon, Johns Hopkins, and John Henley, Mayo Clinic)",
+  "source_links": [
+   [
+    "Scientific American: Do People Only Use 10 Percent of Their Brains?",
+    "https://www.scientificamerican.com/article/do-people-only-use-10-percent-of-their-brains/"
+   ]
+  ]
+ },
+ {
+  "id": "GjGkIfn5I2k",
+  "title": "Lightning DOES strike twice",
+  "published": "2026-10-11T13:35:55+00:00",
+  "description": "The Professor insists lightning never strikes the same place twice. Fact Check shows it does, all the time.",
+  "duration": "PT52S",
+  "slug": "lightning-strike-twice",
+  "myth": "Lightning never strikes the same place twice.",
+  "answer": "It does, and often. Tall, pointed and isolated objects get hit again and again, sometimes more than once in a single storm. Lightning does not avoid places it has already hit.",
+  "sources": "US National Weather Service, Live Science (lightning expert Martin Uman, University of Florida)",
+  "source_links": [
+   [
+    "US National Weather Service: Lightning Myths",
+    "https://www.weather.gov/safety/lightning-myths"
+   ]
+  ]
+ },
+ {
+  "id": "0zclC4hWPQ4",
+  "title": "Your stomach can dissolve a razor blade",
+  "published": "2026-10-11T12:47:44+00:00",
+  "description": "The Professor is horrified by what stomach acid can do. Fact Check explains the catch.",
+  "duration": "PT51S",
+  "slug": "stomach-acid-razor-blade",
+  "myth": "Your stomach acid can dissolve a razor blade.",
+  "answer": "In a laboratory study, simulated gastric juice corroded razor blades over time. After 24 hours the blades weighed 63% of their original weight. This does not make swallowing metal safe: sharp objects can cause serious injury. Never try it. A lab corrosion result is not a safe way to remove a swallowed object.",
+  "sources": "Li et al., \"In vitro effects of simulated gastric juice on swallowed metal objects\" (PubMed), Africa Check",
+  "source_links": [
+   [
+    "Li et al., 1997: In vitro effects of simulated gastric juice on swallowed metal objects (PubMed)",
+    "https://pubmed.ncbi.nlm.nih.gov/9283866/"
+   ]
+  ]
+ }
 ]
