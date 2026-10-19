@@ -4,7 +4,19 @@
   "title": "Why a night race can still overheat the driver",
   "published": "2026-10-18T09:55:49+00:00",
   "sources": "National Weather Service; Formula 1",
-  "slug": "why-a-night-race-can-still-overheat-the-driver"
+  "slug": "why-a-night-race-can-still-overheat-the-driver",
+  "myth": "A night race must be cool enough to keep the driver from overheating.",
+  "answer": "Night does not remove the heat and humidity. Sweat cools the body when it evaporates; high humidity makes it feel hotter (heat index). Formula 1 describes Singapore as a night race with a hot cockpit, little cooling airflow and drivers working in fireproof overalls and a helmet. Those conditions can still put a heavy heat load on a driver.",
+  "source_links": [
+   [
+    "National Weather Service: Heat index and sweat evaporation",
+    "https://www.weather.gov/ama/heatindex"
+   ],
+   [
+    "Formula 1: How drivers prepare for Singapore",
+    "https://www.formula1.com/en/latest/article/surviving-and-thriving-in-singapore-how-drivers-prepare-for-the-toughest.5WK0nvwo8wQWmpT4LZgFJB"
+   ]
+  ]
  },
  {
   "id": "BhREg27a53Y",
