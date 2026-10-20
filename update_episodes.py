@@ -243,6 +243,9 @@ EXTRA = {
                    ["Current Biology: Bats: Vision or echolocation, why not both?", "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"]]},
 }
 
+RETIRED_IDS = {"3BWzKtDIhsA", "vgp-p5f3Exo", "wcW6tSFLh5A"}  # public availability checks 20 Oct 2026; reason unconfirmed
+
+
 def main():
     data = json.load(open(os.path.join(OUT, "episodes.json")))
     known = {x["id"]: x for x in data}
@@ -261,13 +264,24 @@ def main():
             known[f["id"]] = {"id": f["id"], "title": f["title"], "published": f["published"], "sources": f["sources"]}
     for k_, v_ in EXTRA.items():
         if k_ in known: known[k_].update(v_)
-    eps = sorted(known.values(), key=lambda x: x["published"], reverse=True)
+    # Explicit exclusion list: IDs excluded from active lists after public availability checks
+    # (oembed / watch page unavailable); the reason is unconfirmed (not claimed private or removed).
+    # Nothing is inferred from the feed. Records stay in episodes.json; pages stay live with noindex
+    # and are left out of lists, sitemap and llms.txt. Remove an ID from RETIRED_IDS to restore it.
+    for k in known.values():
+        if k["id"] in RETIRED_IDS: k["retired"] = True
+        else: k.pop("retired", None); k.pop("missing_runs", None)
+    all_eps = sorted(known.values(), key=lambda x: x["published"], reverse=True)
+    eps = [x for x in all_eps if not x.get("retired")]
+    retired = [x for x in all_eps if x.get("retired")]
+    if not eps:
+        raise SystemExit("no publishable episodes; leaving site unchanged")
     used = set()
-    for e in eps:
+    for e in all_eps:
         s = e.get("slug") or slugify(e["title"])
         while s in used: s += "-2"
         used.add(s); e["slug"] = s
-    write("episodes.json", json.dumps(eps, indent=1, ensure_ascii=False))
+    write("episodes.json", json.dumps(all_eps, indent=1, ensure_ascii=False))
     write("index.html", build_home(eps))
     write("myths/index.html", build_index(eps))
     write("professor/index.html", build_professor(eps))
@@ -280,7 +294,9 @@ def main():
     write("llms.txt", llms)
     for i, e in enumerate(eps):
         write("myths/%s/index.html" % e["slug"], build_myth(e, eps[i + 1] if i + 1 < len(eps) else None, eps[i - 1] if i else None))
-    print("episodes:", len(eps), "latest:", day(eps[0]))
+    for e in retired:  # keep the page reachable but out of search, lists and sitemap
+        write("myths/%s/index.html" % e["slug"], build_myth(e, None, None).replace("index, follow, max-image-preview:large", "noindex, nofollow", 1))
+    print("episodes:", len(eps), "retired:", len(retired), "latest:", day(eps[0]))
 
 if __name__ == "__main__":
     # Keep layout fixes with the generator and refresh cached styles.
