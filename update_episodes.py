@@ -14,7 +14,7 @@ FEED = "https://www.youtube.com/feeds/videos.xml?channel_id=" + CHANNEL
 SITE = "https://weirdprofessoruniversity.com"
 OUT = os.environ.get("SITE_OUT", ".")
 SHOW = 12
-YT = "https://www.youtube.com/@WeirdScienceProfessor"
+YT = "https://www.youtube.com/@weirdprofessoruniversity"
 TT = "https://www.tiktok.com/@weirdscienceprofessor"
 IG = "https://www.instagram.com/weirdprofessoruniversity/"
 IG_REELS = {"DyRHnBbYyZo": "https://www.instagram.com/reel/DeciC0bxgVF/"}
