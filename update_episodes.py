@@ -169,6 +169,7 @@ def build_index(eps):
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "All myths",
           "url": SITE + "/myths/", "description": desc}
     p = head("All myths | Weird Professor University", desc, "/myths/", ld=ld) + NAV + "<main>"
+    p += '<section class="box right"><h2><a href="/myths/clocks-back-body-clock/">Clocks back. Body clock reset?</a></h2><p>Read the checked explanation and official sources.</p></section>'
     p += '<section><h1 class="pagetitle">All myths</h1><p class="lead">Every Professor claim, with the sourced answer.</p><div class="grid">%s</div></section>' % "".join(card(e) for e in eps)
     return p + "</main>" + FOOT + "</body></html>\n"
 
