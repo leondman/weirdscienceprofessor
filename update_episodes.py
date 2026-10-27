@@ -101,6 +101,9 @@ def video_ld(ep):
     return v
 
 def card(ep):
+    # Owner-approved 27 Oct 2026: hide only the Toilets upload card; retain its record/page.
+    if ep["id"] == "NtQlVsxAaoQ":
+        return ""
     blurb = ("Myth: " + ep["myth"]) if ep.get("myth") else ep.get("description", "")
     return ('<article class="ep"><a class="thumb %s" href="%s"><img src="%s" alt="" loading="lazy" width="480" height="360"></a>'
             '<h3><a href="%s">%s</a></h3><p>%s</p>'
