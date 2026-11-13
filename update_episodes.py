@@ -247,7 +247,7 @@ EXTRA = {
                    ["Current Biology: Bats: Vision or echolocation, why not both?", "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"]]},
 }
 
-RETIRED_IDS = {"3BWzKtDIhsA", "vgp-p5f3Exo", "wcW6tSFLh5A"}  # public availability checks 20 Oct 2026; reason unconfirmed
+RETIRED_IDS = {"3BWzKtDIhsA", "vgp-p5f3Exo", "wcW6tSFLh5A", "NtQlVsxAaoQ"}  # public availability checks 20 Oct 2026; reason unconfirmed
 
 
 def main():
