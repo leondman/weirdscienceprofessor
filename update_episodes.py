@@ -299,7 +299,11 @@ def main():
     for i, e in enumerate(eps):
         write("myths/%s/index.html" % e["slug"], build_myth(e, eps[i + 1] if i + 1 < len(eps) else None, eps[i - 1] if i else None))
     for e in retired:  # keep the page reachable but out of search, lists and sitemap
-        write("myths/%s/index.html" % e["slug"], build_myth(e, None, None).replace("index, follow, max-image-preview:large", "noindex, nofollow", 1))
+        display_ep = e
+        if e["id"] == "NtQlVsxAaoQ":
+            replacement = next(x for x in all_eps if x["id"] == "SRD3bBJm8sg")
+            display_ep = dict(replacement, slug=e["slug"])
+        write("myths/%s/index.html" % e["slug"], build_myth(display_ep, None, None).replace("index, follow, max-image-preview:large", "noindex, nofollow", 1))
     print("episodes:", len(eps), "retired:", len(retired), "latest:", day(eps[0]))
 
 if __name__ == "__main__":
