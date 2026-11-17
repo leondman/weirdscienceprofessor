@@ -31,14 +31,42 @@
   "title": "Did Einstein really fail maths at school?",
   "published": "2026-11-15T13:26:23+00:00",
   "sources": "TIME: https://content.time.com/time/specials/packages/article/0,28804,1936731_1936743_1936758,00.html Snopes: https://www.snopes.com/fact-check/einstein-math-rumor/",
-  "slug": "did-einstein-really-fail-maths-at-school"
+  "slug": "did-einstein-really-fail-maths-at-school",
+  "myth": "Einstein failed maths at school.",
+  "answer": "No. Einstein was consistently excellent at maths - his school records show top marks, and he had mastered differential and integral calculus before he was 15. The \"failed maths\" story grew out of a confusion over grading scales at his Swiss school, which briefly reversed its grading scale, making his top grades look like failures to early biographers. Einstein reportedly dismissed the rumour when shown it in 1935, saying he had mastered calculus before he was fifteen.",
+  "source_links": [
+   [
+    "TIME: Did Einstein fail math?",
+    "https://content.time.com/time/specials/packages/article/0,28804,1936731_1936743_1936758,00.html"
+   ],
+   [
+    "Snopes: Did Einstein fail mathematics in school?",
+    "https://www.snopes.com/fact-check/einstein-math-rumor/"
+   ]
+  ]
  },
  {
   "id": "SRD3bBJm8sg",
   "title": "Is the daddy longlegs the world's most venomous spider?",
   "published": "2026-11-12T09:56:55+00:00",
   "sources": "UC Riverside Entomology: https://entomology.ucr.edu/news/2022/01/14/are-daddy-longlegs-really-most-venomous-spiders-world Venom study (PMC): https://pmc.ncbi.nlm.nih.gov/articles/PMC7682650/ Australian Museum: https://australian.museum/learn/animals/spiders/daddy-long-legs-spider/",
-  "slug": "is-the-daddy-longlegs-the-world-s-most-venomous-spider"
+  "slug": "is-the-daddy-longlegs-the-world-s-most-venomous-spider",
+  "myth": "Daddy longlegs are the most venomous spiders in the world, but their fangs are too short to bite humans.",
+  "answer": "No part of it holds up - and the claim mixes up several different animals. \"Daddy longlegs\" can mean harvestmen (which are not spiders and have no venom glands at all), cellar spiders (which do have venom and can bite people, though the bite is mild), or crane flies (no venom at all). The \"most venomous\" line is folklore: there is no scientific evidence of any of these animals harming a human, and a study of one cellar spider species found its venom was not unusually potent.",
+  "source_links": [
+   [
+    "UC Riverside Entomology: Are daddy longlegs really the most venomous spiders in the world?",
+    "https://entomology.ucr.edu/news/2022/01/14/are-daddy-longlegs-really-most-venomous-spiders-world"
+   ],
+   [
+    "Venom study (PMC): Pholcidae spider venom",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7682650/"
+   ],
+   [
+    "Australian Museum: Daddy-long-legs spiders",
+    "https://australian.museum/learn/animals/spiders/daddy-long-legs-spider/"
+   ]
+  ]
  },
  {
   "id": "T3ZJhPQP9Bc",
