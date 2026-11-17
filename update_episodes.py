@@ -245,6 +245,10 @@ EXTRA = {
   "source_links": [["Bat Conservation International: Blind as a Bat? No Such Thing", "https://www.batcon.org/blind-as-a-bat-no-such-thing/"],
                    ["USGS: Are bats blind?", "https://www.usgs.gov/faqs/are-bats-blind"],
                    ["Current Biology: Bats: Vision or echolocation, why not both?", "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00313-X"]]},
+ "feWqkeBcXPU": {
+  "myth": "A day is always far shorter than a year, so a day on Venus cannot possibly be longer than its year.",
+  "answer": "It can, and it is. NASA's numbers: Venus takes 243 Earth days to spin once on its axis, but only 225 Earth days to orbit the Sun, so the year finishes first. Venus also spins backwards compared with Earth, so its Sun rises in the west and sets in the east. Because the spin is so slow, one sunrise to the next takes about 117 Earth days - roughly four Earth months for a single Venusian morning. Venus has the slowest spin of any planet in the solar system.",
+  "source_links": [["NASA Science: Venus facts", "https://science.nasa.gov/venus/venus-facts/"], ["NASA Science: Venus", "https://science.nasa.gov/venus/"], ["Imagery: NASA/JPL (Mariner 10 Venus) via Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Venus_from_Mariner_10.jpg"], ["Imagery: NASA (Apollo 17 Earth) via Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"]]},
 }
 
 RETIRED_IDS = {"3BWzKtDIhsA", "vgp-p5f3Exo", "wcW6tSFLh5A", "NtQlVsxAaoQ"}  # public availability checks 20 Oct 2026; reason unconfirmed
